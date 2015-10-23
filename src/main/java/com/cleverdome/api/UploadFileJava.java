@@ -20,8 +20,6 @@ public class UploadFileJava  implements java.io.Serializable {
 
     private java.lang.String filename;
 
-    private java.lang.String successStatus1;
-
     private byte[] inputStream;
 
     public UploadFileJava() {
@@ -34,7 +32,6 @@ public class UploadFileJava  implements java.io.Serializable {
            java.lang.Integer descriptionID,
            com.cleverdome.api.DocumentMetadataValueBase[] metadataValues,
            java.lang.String filename,
-           java.lang.String successStatus1,
            byte[] inputStream) {
            this.sessionID = sessionID;
            this.applicationID = applicationID;
@@ -42,7 +39,6 @@ public class UploadFileJava  implements java.io.Serializable {
            this.descriptionID = descriptionID;
            this.metadataValues = metadataValues;
            this.filename = filename;
-           this.successStatus1 = successStatus1;
            this.inputStream = inputStream;
     }
 
@@ -168,26 +164,6 @@ public class UploadFileJava  implements java.io.Serializable {
 
 
     /**
-     * Gets the successStatus1 value for this UploadFileJava.
-     * 
-     * @return successStatus1
-     */
-    public java.lang.String getSuccessStatus1() {
-        return successStatus1;
-    }
-
-
-    /**
-     * Sets the successStatus1 value for this UploadFileJava.
-     * 
-     * @param successStatus1
-     */
-    public void setSuccessStatus1(java.lang.String successStatus1) {
-        this.successStatus1 = successStatus1;
-    }
-
-
-    /**
      * Gets the inputStream value for this UploadFileJava.
      * 
      * @return inputStream
@@ -236,9 +212,6 @@ public class UploadFileJava  implements java.io.Serializable {
             ((this.filename==null && other.getFilename()==null) || 
              (this.filename!=null &&
               this.filename.equals(other.getFilename()))) &&
-            ((this.successStatus1==null && other.getSuccessStatus1()==null) || 
-             (this.successStatus1!=null &&
-              this.successStatus1.equals(other.getSuccessStatus1()))) &&
             ((this.inputStream==null && other.getInputStream()==null) || 
              (this.inputStream!=null &&
               java.util.Arrays.equals(this.inputStream, other.getInputStream())));
@@ -278,9 +251,6 @@ public class UploadFileJava  implements java.io.Serializable {
         }
         if (getFilename() != null) {
             _hashCode += getFilename().hashCode();
-        }
-        if (getSuccessStatus1() != null) {
-            _hashCode += getSuccessStatus1().hashCode();
         }
         if (getInputStream() != null) {
             for (int i=0;
@@ -342,13 +312,6 @@ public class UploadFileJava  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("filename");
         elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "filename"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("successStatus1");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "successStatus1"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(true);

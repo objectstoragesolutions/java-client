@@ -188,7 +188,7 @@ public interface IWidgets extends java.rmi.Remote {
     public com.cleverdome.api.OperationResultOfArrayOfDocumentTypewJCT_PyJf getAllDocumentTypes(java.lang.String sessionID) throws java.rmi.RemoteException;
     public java.lang.String uploadFile(byte[] inputStream) throws java.rmi.RemoteException;
     public java.lang.String flxFileUpload(byte[] inputStream) throws java.rmi.RemoteException;
-    public java.lang.String uploadFileJava(java.lang.String sessionID, java.lang.Integer applicationID, java.lang.Integer templateID, java.lang.Integer descriptionID, com.cleverdome.api.DocumentMetadataValueBase[] metadataValues, java.lang.String filename, java.lang.String successStatus1, byte[] inputStream) throws java.rmi.RemoteException;
+    public java.lang.String uploadFileJava(java.lang.String sessionID, java.lang.Integer applicationID, java.lang.Integer templateID, java.lang.Integer descriptionID, com.cleverdome.api.DocumentMetadataValueBase[] metadataValues, java.lang.String filename, byte[] inputStream) throws java.rmi.RemoteException;
     public java.lang.String addNewExternalDocument(java.lang.String fileName, java.lang.String cdSession, java.lang.Integer applicationID, java.lang.Integer templateID, java.lang.Integer typeID, com.cleverdome.api.DocumentMetadataValueBase[] metadata) throws java.rmi.RemoteException;
     public com.cleverdome.api.OperationResultOfDocumentDetailswJCT_PyJf getDocumentDetailed(java.lang.String sessionID, java.lang.String documentGuid) throws java.rmi.RemoteException;
     public com.cleverdome.api.OperationResultOfDocumentDetailswJCT_PyJf getDocumentDetailedWithoutPages(java.lang.String sessionID, java.lang.String documentGuid) throws java.rmi.RemoteException;
