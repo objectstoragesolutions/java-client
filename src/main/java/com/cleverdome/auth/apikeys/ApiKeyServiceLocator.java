@@ -22,7 +22,7 @@ public class ApiKeyServiceLocator extends org.apache.axis.client.Service impleme
     }
 
     // Use to get a proxy class for BasicHttpBinding_IApiKeyService
-    private java.lang.String BasicHttpBinding_IApiKeyService_address = "https://dev.cleverdome.com/CDSSOService/ApiKeyService.svc";
+    private java.lang.String BasicHttpBinding_IApiKeyService_address = "https://sandbox.cleverdome.com/JavaSSOService/ApiKeyService.svc";
 
     public java.lang.String getBasicHttpBinding_IApiKeyServiceAddress() {
         return BasicHttpBinding_IApiKeyService_address;
