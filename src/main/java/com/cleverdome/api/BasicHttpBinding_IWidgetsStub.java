@@ -3663,7 +3663,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         param.setOmittable(true);
         param.setNillable(true);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "inputStream"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "base64Binary"), byte[].class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "fileData"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         param.setOmittable(true);
         param.setNillable(true);
         oper.addParameter(param);
@@ -14088,7 +14088,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
 }
     }
 
-    public java.lang.String uploadFileJava(java.lang.String sessionID, java.lang.Integer applicationID, java.lang.Integer templateID, java.lang.Integer descriptionID, com.cleverdome.api.DocumentMetadataValueBase[] metadataValues, java.lang.String filename, byte[] inputStream) throws java.rmi.RemoteException {
+    public java.lang.String uploadFileJava(java.lang.String sessionID, java.lang.Integer applicationID, java.lang.Integer templateID, java.lang.Integer descriptionID, com.cleverdome.api.DocumentMetadataValueBase[] metadataValues, java.lang.String filename, java.lang.String fileData) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -14104,7 +14104,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sessionID, applicationID, templateID, descriptionID, metadataValues, filename, inputStream});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sessionID, applicationID, templateID, descriptionID, metadataValues, filename, fileData});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;

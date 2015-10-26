@@ -20,7 +20,7 @@ public class UploadFileJava  implements java.io.Serializable {
 
     private java.lang.String filename;
 
-    private byte[] inputStream;
+    private java.lang.String fileData;
 
     public UploadFileJava() {
     }
@@ -32,14 +32,14 @@ public class UploadFileJava  implements java.io.Serializable {
            java.lang.Integer descriptionID,
            com.cleverdome.api.DocumentMetadataValueBase[] metadataValues,
            java.lang.String filename,
-           byte[] inputStream) {
+           java.lang.String fileData) {
            this.sessionID = sessionID;
            this.applicationID = applicationID;
            this.templateID = templateID;
            this.descriptionID = descriptionID;
            this.metadataValues = metadataValues;
            this.filename = filename;
-           this.inputStream = inputStream;
+           this.fileData = fileData;
     }
 
 
@@ -164,22 +164,22 @@ public class UploadFileJava  implements java.io.Serializable {
 
 
     /**
-     * Gets the inputStream value for this UploadFileJava.
+     * Gets the fileData value for this UploadFileJava.
      * 
-     * @return inputStream
+     * @return fileData
      */
-    public byte[] getInputStream() {
-        return inputStream;
+    public java.lang.String getFileData() {
+        return fileData;
     }
 
 
     /**
-     * Sets the inputStream value for this UploadFileJava.
+     * Sets the fileData value for this UploadFileJava.
      * 
-     * @param inputStream
+     * @param fileData
      */
-    public void setInputStream(byte[] inputStream) {
-        this.inputStream = inputStream;
+    public void setFileData(java.lang.String fileData) {
+        this.fileData = fileData;
     }
 
     private java.lang.Object __equalsCalc = null;
@@ -212,9 +212,9 @@ public class UploadFileJava  implements java.io.Serializable {
             ((this.filename==null && other.getFilename()==null) || 
              (this.filename!=null &&
               this.filename.equals(other.getFilename()))) &&
-            ((this.inputStream==null && other.getInputStream()==null) || 
-             (this.inputStream!=null &&
-              java.util.Arrays.equals(this.inputStream, other.getInputStream())));
+            ((this.fileData==null && other.getFileData()==null) || 
+             (this.fileData!=null &&
+              this.fileData.equals(other.getFileData())));
         __equalsCalc = null;
         return _equals;
     }
@@ -252,16 +252,8 @@ public class UploadFileJava  implements java.io.Serializable {
         if (getFilename() != null) {
             _hashCode += getFilename().hashCode();
         }
-        if (getInputStream() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getInputStream());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getInputStream(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+        if (getFileData() != null) {
+            _hashCode += getFileData().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -317,9 +309,9 @@ public class UploadFileJava  implements java.io.Serializable {
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("inputStream");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "inputStream"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "base64Binary"));
+        elemField.setFieldName("fileData");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "fileData"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
