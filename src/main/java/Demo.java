@@ -13,9 +13,6 @@ import javax.xml.rpc.ServiceException;
 
 public class Demo {
     public static void main(String[] args) throws Exception {
-        AxisProperties.setProperty("http.proxyHost", "127.0.0.1");
-        AxisProperties.setProperty("http.proxyPort", "8888");
-
         Properties demoProps = new Properties();
         InputStream inputStream = Demo.class.getResourceAsStream("demo.properties");
         demoProps.load(inputStream);
@@ -30,7 +27,7 @@ public class Demo {
         }
         String sessionID = responseMessage.getSessionID();
         System.out.println("SessionID: " + sessionID);
-/*
+
         Integer applicationID = Integer.parseInt(demoProps.getProperty("applicationID"));
         String fileName = demoProps.getProperty("fileName");
         InputStream fileStream = Demo.class.getResourceAsStream(fileName);
@@ -38,8 +35,6 @@ public class Demo {
         String fileBase64String = Base64.getEncoder().encodeToString(fileData);
         String documentID = uploadFile(sessionID, applicationID, null, null, null, fileName, fileBase64String);
         System.out.println("DocumentID: " + documentID);
-*/
-        String documentID = "75540588-7be4-11e5-8195-3859f9482d6e";
 
         DocumentField[] allowedFields = getAllowedFields(sessionID, documentID);
         for (DocumentField documentField : allowedFields) {
