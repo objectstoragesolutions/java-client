@@ -49,6 +49,8 @@ public class Demo {
         for (DocumentMetadataValueBase metadataValue: metadataValues) {
             System.out.println(metadataValue.getFieldName() + ": " + metadataValue.getFieldValue());
         }
+
+        testSecurityGroups(sessionID, documentID, userID, applicationID);
     }
 
     public static ApiKeyResponseMessage getApiKeyResponse(String apiKey, String userID, String[] ipAddresses) throws RemoteException, ServiceException {
@@ -106,5 +108,76 @@ public class Demo {
         buffer.flush();
 
         return buffer.toByteArray();
+    }
+
+    public static void testSecurityGroups(String sessionID, String documentID, String externalOwnerID, int applicationID)
+            throws ServiceException, RemoteException {
+
+        WidgetsLocator widgetsLocator = new WidgetsLocator();
+        IWidgets widgets = widgetsLocator.getBasicHttpBinding_IWidgets();
+
+        int securityGroupID = createSecurityGroup(widgets, sessionID, applicationID);
+        addUsersToSecurityGroup(widgets, sessionID, securityGroupID);
+        printSecurityGroup(widgets, sessionID, securityGroupID);
+
+        removeAllUsersFromSecurityGroup(widgets, sessionID, securityGroupID);
+        printSecurityGroup(widgets, sessionID, securityGroupID);
+
+        System.out.println("Attaching security group to the document");
+        // TODO: change magic 200 to PermissionLevel enum
+        widgets.attachSecurityGroupsToDocument(sessionID, documentID, new int[] { securityGroupID }, 200);
+        SecurityGroupData groupsBeforeDeletion = widgets.getSecurityGroups(sessionID, documentID).getReturnValue();
+
+        System.out.println("Groups count before removing: " + groupsBeforeDeletion.getDocumentSecurityData().length + ".");
+        System.out.println("Removing security group from the document");
+        widgets.removeSecurityGroupFromDocument(sessionID, documentID, securityGroupID);
+        SecurityGroupData groupsAfterDeletion = widgets.getSecurityGroups(sessionID, documentID).getReturnValue();
+        System.out.println("Groups count after removing: " + groupsAfterDeletion.getDocumentSecurityData().length + ".");
+
+        widgets.removeSecurityGroup(sessionID, securityGroupID);
+    }
+
+    public static int createSecurityGroup(IWidgets widgets, String sessionID, int applicationID) throws RemoteException {
+        // TODO: get internal user identifier from VendorManagementService
+        int internalUserID = 5260;
+
+        OperationResultOfSecurityGroupwJCT_PyJf createGroupResult =
+                widgets.createSecurityGroup(sessionID, "Test 1", "Test Security Group 1", 1, internalUserID, applicationID);
+        int securityGroupID = createGroupResult.getReturnValue().getID().intValue();
+
+        return securityGroupID;
+    }
+
+    public static void removeAllUsersFromSecurityGroup(IWidgets widgets, String sessionID, int securityGroupID) throws RemoteException {
+        System.out.println("Removing users from security group with id = " + securityGroupID);
+
+        UserData[] users = widgets.getUsersForGroup(sessionID, securityGroupID).getReturnValue();
+        for (UserData user: users)
+        {
+            OperationResultOfanyType result = widgets.removeUserFromSecurityGroup(sessionID, securityGroupID, user.getID());
+        }
+    }
+
+    public static void addUsersToSecurityGroup(IWidgets widgets, String sessionID, int securityGroupID) throws RemoteException {
+        System.out.println("Adding users to security group with id = " + securityGroupID);
+
+        int[] usersToAdd = {1, 2, 3};
+        for (int userID : usersToAdd) {
+            widgets.addUserToSecurityGroup(sessionID, securityGroupID, userID);
+        }
+    }
+
+    public static void printSecurityGroup(IWidgets widgets, String sessionID, int securityGroupID) throws RemoteException {
+        UserData[] users = widgets.getUsersForGroup(sessionID, securityGroupID).getReturnValue();
+        if(users.length == 0){
+            System.out.println("No users in the security group.");
+        } else
+        {
+            System.out.println("Security group users:");
+            for (UserData user: users)
+            {
+                System.out.println("\tID: " +  user.getID() + ", Name: " + user.getFullName() + ".");
+            }
+        }
     }
 }
