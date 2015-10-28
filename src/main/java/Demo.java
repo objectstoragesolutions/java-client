@@ -55,7 +55,8 @@ public class Demo {
             System.out.println(metadataValue.getFieldName() + ": " + metadataValue.getFieldValue());
         }
 
-        testSecurityGroups(sessionID, documentID, userID, applicationID);
+        int cleverDomeUserID = userManagementDemo.getCleverDomeUserID(userID);
+        testSecurityGroups(sessionID, documentID, cleverDomeUserID, applicationID);
     }
 
     public static ApiKeyResponseMessage getApiKeyResponse(String apiKey, String userID, String[] ipAddresses) throws RemoteException, ServiceException {
@@ -115,13 +116,13 @@ public class Demo {
         return buffer.toByteArray();
     }
 
-    public static void testSecurityGroups(String sessionID, String documentID, String externalOwnerID, int applicationID)
+    public static void testSecurityGroups(String sessionID, String documentID, int userID, int applicationID)
             throws ServiceException, RemoteException {
 
         WidgetsLocator widgetsLocator = new WidgetsLocator();
         IWidgets widgets = widgetsLocator.getBasicHttpBinding_IWidgets();
 
-        int securityGroupID = createSecurityGroup(widgets, sessionID, applicationID);
+        int securityGroupID = createSecurityGroup(widgets, sessionID, userID, applicationID);
         addUsersToSecurityGroup(widgets, sessionID, securityGroupID);
         printSecurityGroup(widgets, sessionID, securityGroupID);
 
@@ -142,12 +143,10 @@ public class Demo {
         widgets.removeSecurityGroup(sessionID, securityGroupID);
     }
 
-    public static int createSecurityGroup(IWidgets widgets, String sessionID, int applicationID) throws RemoteException {
-        // TODO: get internal user identifier from VendorManagementService
-        int internalUserID = 5260;
+    public static int createSecurityGroup(IWidgets widgets, String sessionID, int userID, int applicationID) throws RemoteException {
 
         OperationResultOfSecurityGroupwJCT_PyJf createGroupResult =
-                widgets.createSecurityGroup(sessionID, "Test 1", "Test Security Group 1", 1, internalUserID, applicationID);
+                widgets.createSecurityGroup(sessionID, "Test 1", "Test Security Group 1", 1, userID, applicationID);
         int securityGroupID = createGroupResult.getReturnValue().getID().intValue();
 
         return securityGroupID;

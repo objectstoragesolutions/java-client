@@ -59,8 +59,7 @@ public class UserManagementDemo {
             String vendorUserExternalID = demoProps.getProperty("vendorUserExternalID");
             System.out.println("Trying to check user with ExternalID: " + vendorUserExternalID);
 
-            Integer userID = vendorUserManagement.getCleverDomeUserID(demoProps.getProperty("apiKey"),
-                    vendorUserExternalID);
+            Integer userID = getCleverDomeUserID(vendorUserExternalID);
             if (userID == null) {
                 System.out.println("Success. User is not in the system.");
             } else {
@@ -82,5 +81,10 @@ public class UserManagementDemo {
         } catch (Exception ex) {
             System.out.println("Failure. " + ex);
         }
+    }
+
+    public int getCleverDomeUserID(String externalUserID) throws RemoteException {
+        return vendorUserManagement.getCleverDomeUserID(demoProps.getProperty("apiKey"),
+                externalUserID);
     }
 }
