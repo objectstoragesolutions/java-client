@@ -28,6 +28,11 @@ public class Demo {
         String sessionID = responseMessage.getSessionID();
         System.out.println("SessionID: " + sessionID);
 
+        UserManagementDemo userManagementDemo = UserManagementDemo.getInstance();
+        userManagementDemo.testUserCreation();
+        userManagementDemo.testUserCheck();
+        userManagementDemo.testUserDelete();
+
         Integer applicationID = Integer.parseInt(demoProps.getProperty("applicationID"));
         String fileName = demoProps.getProperty("fileName");
         InputStream fileStream = Demo.class.getResourceAsStream(fileName);
