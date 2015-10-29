@@ -130,8 +130,7 @@ public class Demo {
         printSecurityGroup(widgets, sessionID, securityGroupID);
 
         System.out.println("Attaching security group to the document");
-        // TODO: change magic 200 to PermissionLevel enum
-        widgets.attachSecurityGroupsToDocument(sessionID, documentID, new int[] { securityGroupID }, 200);
+        widgets.attachSecurityGroupsToDocument(sessionID, documentID, new int[] { securityGroupID }, PermissionLevel.Modify);
         SecurityGroupData groupsBeforeDeletion = widgets.getSecurityGroups(sessionID, documentID).getReturnValue();
 
         System.out.println("Groups count before removing: " + groupsBeforeDeletion.getDocumentSecurityData().length + ".");
