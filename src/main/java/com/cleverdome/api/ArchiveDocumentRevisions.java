@@ -12,9 +12,7 @@ public class ArchiveDocumentRevisions  implements java.io.Serializable {
 
     private java.lang.String[] revisionGuids;
 
-    private java.lang.Integer retentionPeriod;
-
-    private java.lang.Integer retentionUnit;
+    private java.lang.Integer daysAmount;
 
     public ArchiveDocumentRevisions() {
     }
@@ -22,12 +20,10 @@ public class ArchiveDocumentRevisions  implements java.io.Serializable {
     public ArchiveDocumentRevisions(
            java.lang.String sessionID,
            java.lang.String[] revisionGuids,
-           java.lang.Integer retentionPeriod,
-           java.lang.Integer retentionUnit) {
+           java.lang.Integer daysAmount) {
            this.sessionID = sessionID;
            this.revisionGuids = revisionGuids;
-           this.retentionPeriod = retentionPeriod;
-           this.retentionUnit = retentionUnit;
+           this.daysAmount = daysAmount;
     }
 
 
@@ -72,42 +68,22 @@ public class ArchiveDocumentRevisions  implements java.io.Serializable {
 
 
     /**
-     * Gets the retentionPeriod value for this ArchiveDocumentRevisions.
+     * Gets the daysAmount value for this ArchiveDocumentRevisions.
      * 
-     * @return retentionPeriod
+     * @return daysAmount
      */
-    public java.lang.Integer getRetentionPeriod() {
-        return retentionPeriod;
+    public java.lang.Integer getDaysAmount() {
+        return daysAmount;
     }
 
 
     /**
-     * Sets the retentionPeriod value for this ArchiveDocumentRevisions.
+     * Sets the daysAmount value for this ArchiveDocumentRevisions.
      * 
-     * @param retentionPeriod
+     * @param daysAmount
      */
-    public void setRetentionPeriod(java.lang.Integer retentionPeriod) {
-        this.retentionPeriod = retentionPeriod;
-    }
-
-
-    /**
-     * Gets the retentionUnit value for this ArchiveDocumentRevisions.
-     * 
-     * @return retentionUnit
-     */
-    public java.lang.Integer getRetentionUnit() {
-        return retentionUnit;
-    }
-
-
-    /**
-     * Sets the retentionUnit value for this ArchiveDocumentRevisions.
-     * 
-     * @param retentionUnit
-     */
-    public void setRetentionUnit(java.lang.Integer retentionUnit) {
-        this.retentionUnit = retentionUnit;
+    public void setDaysAmount(java.lang.Integer daysAmount) {
+        this.daysAmount = daysAmount;
     }
 
     private java.lang.Object __equalsCalc = null;
@@ -128,12 +104,9 @@ public class ArchiveDocumentRevisions  implements java.io.Serializable {
             ((this.revisionGuids==null && other.getRevisionGuids()==null) || 
              (this.revisionGuids!=null &&
               java.util.Arrays.equals(this.revisionGuids, other.getRevisionGuids()))) &&
-            ((this.retentionPeriod==null && other.getRetentionPeriod()==null) || 
-             (this.retentionPeriod!=null &&
-              this.retentionPeriod.equals(other.getRetentionPeriod()))) &&
-            ((this.retentionUnit==null && other.getRetentionUnit()==null) || 
-             (this.retentionUnit!=null &&
-              this.retentionUnit.equals(other.getRetentionUnit())));
+            ((this.daysAmount==null && other.getDaysAmount()==null) || 
+             (this.daysAmount!=null &&
+              this.daysAmount.equals(other.getDaysAmount())));
         __equalsCalc = null;
         return _equals;
     }
@@ -159,11 +132,8 @@ public class ArchiveDocumentRevisions  implements java.io.Serializable {
                 }
             }
         }
-        if (getRetentionPeriod() != null) {
-            _hashCode += getRetentionPeriod().hashCode();
-        }
-        if (getRetentionUnit() != null) {
-            _hashCode += getRetentionUnit().hashCode();
+        if (getDaysAmount() != null) {
+            _hashCode += getDaysAmount().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -191,15 +161,8 @@ public class ArchiveDocumentRevisions  implements java.io.Serializable {
         elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "guid"));
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("retentionPeriod");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "retentionPeriod"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("retentionUnit");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "retentionUnit"));
+        elemField.setFieldName("daysAmount");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "daysAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

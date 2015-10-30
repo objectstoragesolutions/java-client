@@ -8,10 +8,7 @@
 package com.cleverdome.api;
 
 public interface IWidgets extends java.rmi.Remote {
-    public com.cleverdome.api.OperationResultOfVendorInfo52SKXdDF getVendorCertInfo(java.lang.String sessionID) throws java.rmi.RemoteException;
-    public com.cleverdome.api.UploadResultOfVendorInfo52SKXdDF updateVendorCert(byte[] inputStream) throws java.rmi.RemoteException;
-    public com.cleverdome.api.OperationResultOfdateTime archiveDocumentRevisions(java.lang.String sessionID, java.lang.String[] revisionGuids, java.lang.Integer retentionPeriod, java.lang.Integer retentionUnit) throws java.rmi.RemoteException;
-    public com.cleverdome.api.OperationResultOfboolean createNewVendor(java.lang.String sessionID, java.lang.String name) throws java.rmi.RemoteException;
+    public com.cleverdome.api.OperationResultOfdateTime archiveDocumentRevisions(java.lang.String sessionID, java.lang.String[] revisionGuids, java.lang.Integer daysAmount) throws java.rmi.RemoteException;
     public com.cleverdome.api.OperationResultOfboolean isCurrentRevisionViewedByCurrentUser(java.lang.String sessionID, java.lang.String documentGuid) throws java.rmi.RemoteException;
     public com.cleverdome.api.OperationResultOfint addDocumentEvent(java.lang.String sessionID, java.lang.String documentGuid, java.lang.Integer documentEvent) throws java.rmi.RemoteException;
     public com.cleverdome.api.OperationResultOfArrayOfguiduHEDJ7Dj getDocumentsForEventsNotArchived(java.lang.String sessionID, int[] eventIDs, java.lang.Integer applicationID) throws java.rmi.RemoteException;
@@ -46,7 +43,7 @@ public interface IWidgets extends java.rmi.Remote {
     public com.cleverdome.api.OperationResultOfUploadCheckResult52SKXdDF checkIfCanReuploadDocument(java.lang.String sessionID, java.lang.String documentGuid, java.lang.Long fileSize, java.lang.String fileExtension) throws java.rmi.RemoteException;
     public com.cleverdome.api.OperationResultOfBucketQuotaInfo52SKXdDF getBucketQuotaInfo(java.lang.Integer applicationID, java.lang.String sessionID, java.lang.Integer sharedUserID) throws java.rmi.RemoteException;
     public com.cleverdome.api.OperationResultOfanyType lockUnlockDocsForDelete(java.lang.String sessionID, java.lang.String[] documentGuids, java.lang.Boolean lockDocuments) throws java.rmi.RemoteException;
-    public com.cleverdome.api.OperationResultOfdateTime archiveDocuments(java.lang.String sessionID, java.lang.String[] documentGuids, java.lang.Integer retentionPeriod, java.lang.Integer retentionUnit) throws java.rmi.RemoteException;
+    public com.cleverdome.api.OperationResultOfdateTime archiveDocuments(java.lang.String sessionID, java.lang.String[] documentGuids, java.lang.Integer daysAmount) throws java.rmi.RemoteException;
     public com.cleverdome.api.BarcodesDataList getDocumentActiveBarcodes(byte[] inputStream) throws java.rmi.RemoteException;
     public com.cleverdome.api.DocumentRevision addDocumentRevision(byte[] inputStream) throws java.rmi.RemoteException;
     public java.lang.String addExternalDocumentRevision(java.lang.String parentDocGuid, java.lang.Long fileSize, java.util.Calendar revisionDate, java.lang.Integer uploadedBy, java.lang.String fileType, java.lang.String sha1Hash, java.lang.String versionID, java.lang.Integer appID) throws java.rmi.RemoteException;

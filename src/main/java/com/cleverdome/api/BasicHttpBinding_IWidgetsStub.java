@@ -16,7 +16,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
     static org.apache.axis.description.OperationDesc [] _operations;
 
     static {
-        _operations = new org.apache.axis.description.OperationDesc[184];
+        _operations = new org.apache.axis.description.OperationDesc[181];
         _initOperationDesc1();
         _initOperationDesc2();
         _initOperationDesc3();
@@ -42,29 +42,6 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("GetVendorCertInfo");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
-        param.setOmittable(true);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfVendorInfo52SKXdDF"));
-        oper.setReturnClass(com.cleverdome.api.OperationResultOfVendorInfo52SKXdDF.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetVendorCertInfoResult"));
-        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[0] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("UpdateVendorCert");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "inputStream"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/Message", "StreamBody"), byte[].class, false, false);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/DocumentManagementCommon.Data", "UploadResultOfVendorInfo52SKXdDF"));
-        oper.setReturnClass(com.cleverdome.api.UploadResultOfVendorInfo52SKXdDF.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "UpdateVendorCertResult"));
-        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[1] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ArchiveDocumentRevisions");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
         param.setOmittable(true);
@@ -74,10 +51,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         param.setOmittable(true);
         param.setNillable(true);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "retentionPeriod"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), java.lang.Integer.class, false, false);
-        param.setOmittable(true);
-        oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "retentionUnit"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), java.lang.Integer.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "daysAmount"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), java.lang.Integer.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfdateTime"));
@@ -85,23 +59,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "ArchiveDocumentRevisionsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[2] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("CreateNewVendor");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
-        param.setOmittable(true);
-        oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "name"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
-        param.setOmittable(true);
-        param.setNillable(true);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfboolean"));
-        oper.setReturnClass(com.cleverdome.api.OperationResultOfboolean.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "CreateNewVendorResult"));
-        oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[3] = oper;
+        _operations[0] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("IsCurrentRevisionViewedByCurrentUser");
@@ -116,7 +74,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "IsCurrentRevisionViewedByCurrentUserResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[4] = oper;
+        _operations[1] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddDocumentEvent");
@@ -134,7 +92,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddDocumentEventResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[5] = oper;
+        _operations[2] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentsForEventsNotArchived");
@@ -154,7 +112,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentsForEventsNotArchivedResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[6] = oper;
+        _operations[3] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("MarkForArchive");
@@ -172,7 +130,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "MarkForArchiveResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[7] = oper;
+        _operations[4] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("MarkedForArchival");
@@ -187,7 +145,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "MarkedForArchivalResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[8] = oper;
+        _operations[5] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ArchiveLatestVesion");
@@ -205,13 +163,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "ArchiveLatestVesionResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[9] = oper;
+        _operations[6] = oper;
 
-    }
-
-    private static void _initOperationDesc2(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveDocumentIndex");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -225,7 +178,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveDocumentIndexResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[10] = oper;
+        _operations[7] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UpdateWorkflowPendingDocument");
@@ -240,7 +193,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "UpdateWorkflowPendingDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[11] = oper;
+        _operations[8] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetQualityReviewReport");
@@ -258,8 +211,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnType(org.apache.axis.encoding.XMLType.AXIS_VOID);
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[12] = oper;
+        _operations[9] = oper;
 
+    }
+
+    private static void _initOperationDesc2(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetObjectLayout");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "fieldID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
@@ -269,7 +227,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnType(org.apache.axis.encoding.XMLType.AXIS_VOID);
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[13] = oper;
+        _operations[10] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UpdateWorkflowForDocument");
@@ -292,7 +250,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "UpdateWorkflowForDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[14] = oper;
+        _operations[11] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddTermToSearchStatistics");
@@ -316,7 +274,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddTermToSearchStatisticsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[15] = oper;
+        _operations[12] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddFacetToSearchStatistics");
@@ -336,7 +294,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddFacetToSearchStatisticsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[16] = oper;
+        _operations[13] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddDocumentSelectionStatistics");
@@ -363,7 +321,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddDocumentSelectionStatisticsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[17] = oper;
+        _operations[14] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentsInProcessing");
@@ -384,7 +342,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentsInProcessingResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[18] = oper;
+        _operations[15] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetRecentDocuments");
@@ -414,13 +372,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetRecentDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[19] = oper;
+        _operations[16] = oper;
 
-    }
-
-    private static void _initOperationDesc3(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentsWithUpdates");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -443,7 +396,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentsWithUpdatesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[20] = oper;
+        _operations[17] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetTrustedUsers");
@@ -455,7 +408,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetTrustedUsersResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[21] = oper;
+        _operations[18] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddTrustedUser");
@@ -474,8 +427,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddTrustedUserResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[22] = oper;
+        _operations[19] = oper;
 
+    }
+
+    private static void _initOperationDesc3(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DeleteTrustedUser");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -489,7 +447,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "DeleteTrustedUserResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[23] = oper;
+        _operations[20] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SendInviteTrustedUser");
@@ -508,7 +466,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SendInviteTrustedUserResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[24] = oper;
+        _operations[21] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("InviteTrustedUser");
@@ -540,7 +498,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "InviteTrustedUserResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[25] = oper;
+        _operations[22] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentsSharingInfo");
@@ -557,7 +515,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentsSharingInfoResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[26] = oper;
+        _operations[23] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SetPermissionsForUser");
@@ -580,7 +538,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SetPermissionsForUserResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[27] = oper;
+        _operations[24] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ShareDocument");
@@ -620,7 +578,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "ShareDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[28] = oper;
+        _operations[25] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ShareAllDocuments");
@@ -664,13 +622,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "ShareAllDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[29] = oper;
+        _operations[26] = oper;
 
-    }
-
-    private static void _initOperationDesc4(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveSharedDocumentRights");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -689,7 +642,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveSharedDocumentRightsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[30] = oper;
+        _operations[27] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ChangSharedDocumentSecurityLevel");
@@ -712,7 +665,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "ChangSharedDocumentSecurityLevelResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[31] = oper;
+        _operations[28] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ChangSharedDocumentExpiration");
@@ -736,8 +689,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "ChangSharedDocumentExpirationResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[32] = oper;
+        _operations[29] = oper;
 
+    }
+
+    private static void _initOperationDesc4(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("IsEnoughSpaceToUploadFile");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "applicationID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), java.lang.Integer.class, false, false);
@@ -758,7 +716,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "IsEnoughSpaceToUploadFileResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[33] = oper;
+        _operations[30] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CheckIfCanUploadDocument");
@@ -780,7 +738,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "CheckIfCanUploadDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[34] = oper;
+        _operations[31] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CheckIfCanReuploadDocument");
@@ -802,7 +760,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "CheckIfCanReuploadDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[35] = oper;
+        _operations[32] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetBucketQuotaInfo");
@@ -821,7 +779,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetBucketQuotaInfoResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[36] = oper;
+        _operations[33] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("LockUnlockDocsForDelete");
@@ -841,7 +799,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "LockUnlockDocsForDeleteResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[37] = oper;
+        _operations[34] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ArchiveDocuments");
@@ -853,10 +811,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         param.setOmittable(true);
         param.setNillable(true);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "retentionPeriod"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), java.lang.Integer.class, false, false);
-        param.setOmittable(true);
-        oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "retentionUnit"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), java.lang.Integer.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "daysAmount"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), java.lang.Integer.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfdateTime"));
@@ -864,7 +819,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "ArchiveDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[38] = oper;
+        _operations[35] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentActiveBarcodes");
@@ -875,13 +830,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentActiveBarcodesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[39] = oper;
+        _operations[36] = oper;
 
-    }
-
-    private static void _initOperationDesc5(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddDocumentRevision");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "inputStream"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/Message", "StreamBody"), byte[].class, false, false);
@@ -891,7 +841,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddDocumentRevisionResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[40] = oper;
+        _operations[37] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddExternalDocumentRevision");
@@ -927,7 +877,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddExternalDocumentRevisionResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[41] = oper;
+        _operations[38] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DownloadDocumentRevision");
@@ -945,8 +895,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "DownloadDocumentRevisionResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[42] = oper;
+        _operations[39] = oper;
 
+    }
+
+    private static void _initOperationDesc5(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentHTML");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -964,7 +919,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentHTMLResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[43] = oper;
+        _operations[40] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DownloadDocumentHeadRevision");
@@ -979,7 +934,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "DownloadDocumentHeadRevisionResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[44] = oper;
+        _operations[41] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentsArchive");
@@ -995,7 +950,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentsArchiveResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[45] = oper;
+        _operations[42] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DownloadDocuments");
@@ -1010,7 +965,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "DownloadDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[46] = oper;
+        _operations[43] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetSpecifiedDocsDownloadID");
@@ -1027,7 +982,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetSpecifiedDocsDownloadIDResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[47] = oper;
+        _operations[44] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllFilteredDocsDownloadID");
@@ -1052,7 +1007,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetAllFilteredDocsDownloadIDResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[48] = oper;
+        _operations[45] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("BulkUploadDocuments");
@@ -1063,13 +1018,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "BulkUploadDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[49] = oper;
+        _operations[46] = oper;
 
-    }
-
-    private static void _initOperationDesc6(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetLackDeletePermissionDocuments");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -1085,7 +1035,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetLackDeletePermissionDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[50] = oper;
+        _operations[47] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveDocument");
@@ -1100,7 +1050,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[51] = oper;
+        _operations[48] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveDocuments");
@@ -1117,8 +1067,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[52] = oper;
+        _operations[49] = oper;
 
+    }
+
+    private static void _initOperationDesc6(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DeleteDocumentsPermamently");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -1134,7 +1089,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "DeleteDocumentsPermamentlyResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[53] = oper;
+        _operations[50] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveAllDocuments");
@@ -1159,7 +1114,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveAllDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[54] = oper;
+        _operations[51] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RepairRemovedDocuments");
@@ -1180,7 +1135,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RepairRemovedDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[55] = oper;
+        _operations[52] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RepairAllRemovedDocuments");
@@ -1195,7 +1150,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RepairAllRemovedDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[56] = oper;
+        _operations[53] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentNotes");
@@ -1210,7 +1165,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentNotesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[57] = oper;
+        _operations[54] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CreateDocumentNote");
@@ -1229,7 +1184,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "CreateDocumentNoteResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[58] = oper;
+        _operations[55] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentPages");
@@ -1252,13 +1207,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentPagesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[59] = oper;
+        _operations[56] = oper;
 
-    }
-
-    private static void _initOperationDesc7(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("BurnAnnotations");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -1272,7 +1222,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "BurnAnnotationsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[60] = oper;
+        _operations[57] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SetAnnotation");
@@ -1295,7 +1245,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SetAnnotationResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[61] = oper;
+        _operations[58] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentPreviewInfo");
@@ -1310,8 +1260,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentPreviewInfoResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[62] = oper;
+        _operations[59] = oper;
 
+    }
+
+    private static void _initOperationDesc7(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SetupBatchForDocument");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -1333,7 +1288,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SetupBatchForDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[63] = oper;
+        _operations[60] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentBatches");
@@ -1348,7 +1303,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentBatchesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[64] = oper;
+        _operations[61] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetBatchItems");
@@ -1363,7 +1318,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetBatchItemsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[65] = oper;
+        _operations[62] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentBatchItemsForApproval");
@@ -1378,7 +1333,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentBatchItemsForApprovalResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[66] = oper;
+        _operations[63] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CopyMetadataToNextBatchItem");
@@ -1396,7 +1351,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "CopyMetadataToNextBatchItemResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[67] = oper;
+        _operations[64] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentBarcodes");
@@ -1412,7 +1367,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentBarcodesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[68] = oper;
+        _operations[65] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SaveDocumentBarcode");
@@ -1428,13 +1383,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SaveDocumentBarcodeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[69] = oper;
+        _operations[66] = oper;
 
-    }
-
-    private static void _initOperationDesc8(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentLockInformation");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -1448,7 +1398,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentLockInformationResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[70] = oper;
+        _operations[67] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("LockDocument");
@@ -1463,7 +1413,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "LockDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[71] = oper;
+        _operations[68] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveDocumentLock");
@@ -1481,8 +1431,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveDocumentLockResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[72] = oper;
+        _operations[69] = oper;
 
+    }
+
+    private static void _initOperationDesc8(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetWorkflowEvents");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -1496,7 +1451,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetWorkflowEventsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[73] = oper;
+        _operations[70] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetWorkflowEventsCurrentRevision");
@@ -1511,7 +1466,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetWorkflowEventsCurrentRevisionResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[74] = oper;
+        _operations[71] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetWorkflowEvent");
@@ -1526,7 +1481,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetWorkflowEventResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[75] = oper;
+        _operations[72] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetUserDefinedMetadata");
@@ -1541,7 +1496,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetUserDefinedMetadataResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[76] = oper;
+        _operations[73] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SetMetadataValues");
@@ -1566,7 +1521,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SetMetadataValuesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[77] = oper;
+        _operations[74] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetIntegratedMetadata");
@@ -1581,7 +1536,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetIntegratedMetadataResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[78] = oper;
+        _operations[75] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetIntegratedFieldTypesForDocument");
@@ -1596,13 +1551,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetIntegratedFieldTypesForDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[79] = oper;
+        _operations[76] = oper;
 
-    }
-
-    private static void _initOperationDesc9(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllAvailableDocumentFieldTypesDetailed");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -1616,7 +1566,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetAllAvailableDocumentFieldTypesDetailedResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[80] = oper;
+        _operations[77] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentsByMetadataValue");
@@ -1651,7 +1601,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentsByMetadataValueResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[81] = oper;
+        _operations[78] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetMetadataValuesForFieldType");
@@ -1669,8 +1619,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetMetadataValuesForFieldTypeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[82] = oper;
+        _operations[79] = oper;
 
+    }
+
+    private static void _initOperationDesc9(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetTemplatesByMetadata");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -1690,7 +1645,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetTemplatesByMetadataResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[83] = oper;
+        _operations[80] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentTypesByMetadata");
@@ -1715,7 +1670,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentTypesByMetadataResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[84] = oper;
+        _operations[81] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetApplications");
@@ -1727,7 +1682,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetApplicationsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[85] = oper;
+        _operations[82] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDefaulTemplateAndDescription");
@@ -1742,7 +1697,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDefaulTemplateAndDescriptionResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[86] = oper;
+        _operations[83] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentEsignInfo");
@@ -1757,7 +1712,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentEsignInfoResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[87] = oper;
+        _operations[84] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetEsignEnvelopes");
@@ -1777,7 +1732,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetEsignEnvelopesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[88] = oper;
+        _operations[85] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllEsignStatuses");
@@ -1789,13 +1744,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetAllEsignStatusesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[89] = oper;
+        _operations[86] = oper;
 
-    }
-
-    private static void _initOperationDesc10(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetSecurityGroupsByType");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -1812,7 +1762,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetSecurityGroupsByTypeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[90] = oper;
+        _operations[87] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetSecurityGroups");
@@ -1827,7 +1777,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetSecurityGroupsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[91] = oper;
+        _operations[88] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetSecurityGroupByID");
@@ -1842,8 +1792,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetSecurityGroupByIDResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[92] = oper;
+        _operations[89] = oper;
 
+    }
+
+    private static void _initOperationDesc10(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CreateSecurityGroup");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -1873,7 +1828,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "CreateSecurityGroupResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[93] = oper;
+        _operations[90] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveSecurityGroup");
@@ -1888,7 +1843,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveSecurityGroupResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[94] = oper;
+        _operations[91] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetUsersForGroup");
@@ -1903,7 +1858,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetUsersForGroupResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[95] = oper;
+        _operations[92] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetUserSecurityGroups");
@@ -1926,7 +1881,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetUserSecurityGroupsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[96] = oper;
+        _operations[93] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddUserToSecurityGroup");
@@ -1944,7 +1899,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddUserToSecurityGroupResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[97] = oper;
+        _operations[94] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveUserFromSecurityGroup");
@@ -1962,7 +1917,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveUserFromSecurityGroupResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[98] = oper;
+        _operations[95] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SearchUsers");
@@ -1978,13 +1933,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SearchUsersResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[99] = oper;
+        _operations[96] = oper;
 
-    }
-
-    private static void _initOperationDesc11(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetUserDataByEmail");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -2003,7 +1953,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetUserDataByEmailResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[100] = oper;
+        _operations[97] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SearchSecurityGroup");
@@ -2019,7 +1969,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SearchSecurityGroupResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[101] = oper;
+        _operations[98] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SearchSecurityGroupNotAdded");
@@ -2038,8 +1988,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SearchSecurityGroupNotAddedResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[102] = oper;
+        _operations[99] = oper;
 
+    }
+
+    private static void _initOperationDesc11(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveSecurityGroupFromDocument");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -2056,7 +2011,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveSecurityGroupFromDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[103] = oper;
+        _operations[100] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetSecurityGroupTypes");
@@ -2068,7 +2023,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetSecurityGroupTypesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[104] = oper;
+        _operations[101] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveAllSecurityGroupsFromDocument");
@@ -2083,7 +2038,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveAllSecurityGroupsFromDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[105] = oper;
+        _operations[102] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AttachSecurityGroupsToDocument");
@@ -2106,7 +2061,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AttachSecurityGroupsToDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[106] = oper;
+        _operations[103] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetPermissionsForCurrentUser");
@@ -2121,7 +2076,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetPermissionsForCurrentUserResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[107] = oper;
+        _operations[104] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetBatchIDForCriteria");
@@ -2141,7 +2096,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetBatchIDForCriteriaResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[108] = oper;
+        _operations[105] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("MarkRequiredDocumentsComplete");
@@ -2159,13 +2114,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "MarkRequiredDocumentsCompleteResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[109] = oper;
+        _operations[106] = oper;
 
-    }
-
-    private static void _initOperationDesc12(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UserCanEditMetadata");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -2179,7 +2129,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "UserCanEditMetadataResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[110] = oper;
+        _operations[107] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentRevisions");
@@ -2194,7 +2144,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentRevisionsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[111] = oper;
+        _operations[108] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocument");
@@ -2209,8 +2159,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[112] = oper;
+        _operations[109] = oper;
 
+    }
+
+    private static void _initOperationDesc12(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentDetailedMetadataInfo");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -2224,7 +2179,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentDetailedMetadataInfoResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[113] = oper;
+        _operations[110] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentMetadata");
@@ -2239,7 +2194,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentMetadataResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[114] = oper;
+        _operations[111] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentMetadataBase");
@@ -2254,7 +2209,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentMetadataBaseResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[115] = oper;
+        _operations[112] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllowedFieldsForDocument");
@@ -2269,7 +2224,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetAllowedFieldsForDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[116] = oper;
+        _operations[113] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAvailableFields");
@@ -2290,7 +2245,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetAvailableFieldsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[117] = oper;
+        _operations[114] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentRequiredFields");
@@ -2305,7 +2260,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentRequiredFieldsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[118] = oper;
+        _operations[115] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddDocumentField");
@@ -2327,13 +2282,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddDocumentFieldResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[119] = oper;
+        _operations[116] = oper;
 
-    }
-
-    private static void _initOperationDesc13(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveDocumentField");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -2350,7 +2300,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveDocumentFieldResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[120] = oper;
+        _operations[117] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveDocumentFieldByValue");
@@ -2372,7 +2322,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveDocumentFieldByValueResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[121] = oper;
+        _operations[118] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentTags");
@@ -2387,8 +2337,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentTagsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[122] = oper;
+        _operations[119] = oper;
 
+    }
+
+    private static void _initOperationDesc13(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetUserTags");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -2399,7 +2354,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetUserTagsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[123] = oper;
+        _operations[120] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddDocumentTag");
@@ -2418,7 +2373,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddDocumentTagResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[124] = oper;
+        _operations[121] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddTagsToDocuments");
@@ -2440,7 +2395,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddTagsToDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[125] = oper;
+        _operations[122] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("EditDocumentsTags");
@@ -2467,7 +2422,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "EditDocumentsTagsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[126] = oper;
+        _operations[123] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("EditAllDocumentsTags");
@@ -2502,7 +2457,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "EditAllDocumentsTagsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[127] = oper;
+        _operations[124] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveDocumentTag");
@@ -2520,7 +2475,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveDocumentTagResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[128] = oper;
+        _operations[125] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveDocumentTagByName");
@@ -2539,13 +2494,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveDocumentTagByNameResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[129] = oper;
+        _operations[126] = oper;
 
-    }
-
-    private static void _initOperationDesc14(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentMetadataHierarchy");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -2556,7 +2506,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentMetadataHierarchyResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[130] = oper;
+        _operations[127] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetMetadataHierarchysBehalfUser");
@@ -2571,7 +2521,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetMetadataHierarchysBehalfUserResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[131] = oper;
+        _operations[128] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddMetadataHierarchyNode");
@@ -2592,8 +2542,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddMetadataHierarchyNodeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[132] = oper;
+        _operations[129] = oper;
 
+    }
+
+    private static void _initOperationDesc14(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("MoveMetadataHierarchyNode");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -2615,7 +2570,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "MoveMetadataHierarchyNodeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[133] = oper;
+        _operations[130] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveMetadataHierarchyNode");
@@ -2634,7 +2589,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveMetadataHierarchyNodeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[134] = oper;
+        _operations[131] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RenameMetadataHierarchyNode");
@@ -2657,7 +2612,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RenameMetadataHierarchyNodeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[135] = oper;
+        _operations[132] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CreateUserTagAlert");
@@ -2689,7 +2644,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "CreateUserTagAlertResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[136] = oper;
+        _operations[133] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UpdateUserTagAlert");
@@ -2724,7 +2679,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "UpdateUserTagAlertResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[137] = oper;
+        _operations[134] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("DeleteUserTagAlert");
@@ -2739,7 +2694,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "DeleteUserTagAlertResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[138] = oper;
+        _operations[135] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAvailableFieldTypesForDocumentType");
@@ -2760,13 +2715,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetAvailableFieldTypesForDocumentTypeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[139] = oper;
+        _operations[136] = oper;
 
-    }
-
-    private static void _initOperationDesc15(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddFieldToDocumentType");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -2790,7 +2740,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddFieldToDocumentTypeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[140] = oper;
+        _operations[137] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveFieldFromDocumentType");
@@ -2814,7 +2764,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveFieldFromDocumentTypeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[141] = oper;
+        _operations[138] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllFieldTypes");
@@ -2826,8 +2776,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetAllFieldTypesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[142] = oper;
+        _operations[139] = oper;
 
+    }
+
+    private static void _initOperationDesc15(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SearchDocumentMetadata");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -2866,7 +2821,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SearchDocumentMetadataResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[143] = oper;
+        _operations[140] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetFacetSearchSuggest");
@@ -2906,7 +2861,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetFacetSearchSuggestResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[144] = oper;
+        _operations[141] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetFacetFieldNames");
@@ -2943,7 +2898,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetFacetFieldNamesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[145] = oper;
+        _operations[142] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SearchFacetValues");
@@ -2987,7 +2942,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SearchFacetValuesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[146] = oper;
+        _operations[143] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllSearcheableFields");
@@ -2999,7 +2954,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetAllSearcheableFieldsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[147] = oper;
+        _operations[144] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDashboardEvents");
@@ -3014,7 +2969,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDashboardEventsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[148] = oper;
+        _operations[145] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetEventsForDocument");
@@ -3034,13 +2989,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetEventsForDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[149] = oper;
+        _operations[146] = oper;
 
-    }
-
-    private static void _initOperationDesc16(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetArchiveInfoForDocument");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -3056,7 +3006,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetArchiveInfoForDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[150] = oper;
+        _operations[147] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SetDefaultDescriptionForApplication");
@@ -3077,7 +3027,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SetDefaultDescriptionForApplicationResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[151] = oper;
+        _operations[148] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentsForEventsByMetaValue");
@@ -3104,8 +3054,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentsForEventsByMetaValueResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[152] = oper;
+        _operations[149] = oper;
 
+    }
+
+    private static void _initOperationDesc16(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentsForEvents");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -3124,7 +3079,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentsForEventsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[153] = oper;
+        _operations[150] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetListOfDocumentsByEvent");
@@ -3150,7 +3105,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetListOfDocumentsByEventResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[154] = oper;
+        _operations[151] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetFilterDocuments");
@@ -3197,7 +3152,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetFilterDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[155] = oper;
+        _operations[152] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetFilterDocumentsWithMetadata");
@@ -3226,7 +3181,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetFilterDocumentsWithMetadataResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[156] = oper;
+        _operations[153] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDeactivatedDocuments");
@@ -3251,7 +3206,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDeactivatedDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[157] = oper;
+        _operations[154] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("ChangeDocumentApplication");
@@ -3269,7 +3224,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "ChangeDocumentApplicationResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[158] = oper;
+        _operations[155] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAvailableDocumentEventsForApplication");
@@ -3284,13 +3239,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetAvailableDocumentEventsForApplicationResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[159] = oper;
+        _operations[156] = oper;
 
-    }
-
-    private static void _initOperationDesc17(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllDocumentEvents");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -3301,7 +3251,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetAllDocumentEventsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[160] = oper;
+        _operations[157] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetRelatedDocuments");
@@ -3323,7 +3273,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetRelatedDocumentsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[161] = oper;
+        _operations[158] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumensByTags");
@@ -3346,8 +3296,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumensByTagsResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[162] = oper;
+        _operations[159] = oper;
 
+    }
+
+    private static void _initOperationDesc17(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentsInfoByMetadataValue");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -3366,7 +3321,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentsInfoByMetadataValueResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[163] = oper;
+        _operations[160] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentsBehalfSharedUser");
@@ -3390,7 +3345,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentsBehalfSharedUserResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[164] = oper;
+        _operations[161] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetPermittedTagTrees");
@@ -3402,7 +3357,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetPermittedTagTreesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[165] = oper;
+        _operations[162] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CreateDocumentTemplate");
@@ -3418,7 +3373,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "CreateDocumentTemplateResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[166] = oper;
+        _operations[163] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveDocumentTemplate");
@@ -3433,7 +3388,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveDocumentTemplateResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[167] = oper;
+        _operations[164] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UnlinkTemplate");
@@ -3451,7 +3406,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "UnlinkTemplateResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[168] = oper;
+        _operations[165] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllDocumentTemplates");
@@ -3463,13 +3418,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetAllDocumentTemplatesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[169] = oper;
+        _operations[166] = oper;
 
-    }
-
-    private static void _initOperationDesc18(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentTemplate");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -3483,7 +3433,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentTemplateResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[170] = oper;
+        _operations[167] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentTemplates");
@@ -3498,7 +3448,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentTemplatesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[171] = oper;
+        _operations[168] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("SetDocumentTemplate");
@@ -3521,8 +3471,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "SetDocumentTemplateResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[172] = oper;
+        _operations[169] = oper;
 
+    }
+
+    private static void _initOperationDesc18(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("CreateDocumentType");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -3543,7 +3498,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "CreateDocumentTypeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[173] = oper;
+        _operations[170] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("RemoveDocumentType");
@@ -3564,7 +3519,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveDocumentTypeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[174] = oper;
+        _operations[171] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentType");
@@ -3579,7 +3534,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentTypeResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[175] = oper;
+        _operations[172] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentTypes");
@@ -3597,7 +3552,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentTypesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[176] = oper;
+        _operations[173] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetAllDocumentTypes");
@@ -3609,7 +3564,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetAllDocumentTypesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[177] = oper;
+        _operations[174] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UploadFile");
@@ -3620,7 +3575,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "UploadFileResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[178] = oper;
+        _operations[175] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("FlxFileUpload");
@@ -3631,13 +3586,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "FlxFileUploadResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[179] = oper;
+        _operations[176] = oper;
 
-    }
-
-    private static void _initOperationDesc19(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("UploadFileJava");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -3672,7 +3622,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "UploadFileJavaResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[180] = oper;
+        _operations[177] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("AddNewExternalDocument");
@@ -3705,7 +3655,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AddNewExternalDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[181] = oper;
+        _operations[178] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentDetailed");
@@ -3720,8 +3670,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentDetailedResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[182] = oper;
+        _operations[179] = oper;
 
+    }
+
+    private static void _initOperationDesc19(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("GetDocumentDetailedWithoutPages");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "sessionID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"), java.lang.String.class, false, false);
@@ -3735,7 +3690,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "GetDocumentDetailedWithoutPagesResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[183] = oper;
+        _operations[180] = oper;
 
     }
 
@@ -4495,6 +4450,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+            qName = new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResult");
+            cachedSerQNames.add(qName);
+            cls = com.cleverdome.api.OperationResult.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfAlertE_P4QZOfs");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.OperationResultOfAlertE_P4QZOfs.class;
@@ -4565,13 +4527,6 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfArrayOfDocumentDashboardwJCT_PyJf");
-            cachedSerQNames.add(qName);
-            cls = com.cleverdome.api.OperationResultOfArrayOfDocumentDashboardwJCT_PyJf.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
     }
     private void addBindings1() {
             java.lang.Class cls;
@@ -4587,6 +4542,13 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
+            qName = new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfArrayOfDocumentDashboardwJCT_PyJf");
+            cachedSerQNames.add(qName);
+            cls = com.cleverdome.api.OperationResultOfArrayOfDocumentDashboardwJCT_PyJf.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
             qName = new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfArrayOfDocumentDetailedMetadataInfowJCT_PyJf");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.OperationResultOfArrayOfDocumentDetailedMetadataInfowJCT_PyJf.class;
@@ -4972,13 +4934,6 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfVendorInfo52SKXdDF");
-            cachedSerQNames.add(qName);
-            cls = com.cleverdome.api.OperationResultOfVendorInfo52SKXdDF.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
             qName = new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "PendingDocument");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.PendingDocument.class;
@@ -5169,20 +5124,6 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/DocumentManagementCommon.Data", "UploadResultOfVendorInfo52SKXdDF");
-            cachedSerQNames.add(qName);
-            cls = com.cleverdome.api.UploadResultOfVendorInfo52SKXdDF.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/DocumentManagementCommon.Data", "VendorInfo");
-            cachedSerQNames.add(qName);
-            cls = com.cleverdome.api.VendorInfo.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
             qName = new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/DocumentManagementCommon.Pager", "LastValues");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.LastValues.class;
@@ -5301,6 +5242,20 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+            qName = new javax.xml.namespace.QName("http://tempuri.org/", ">AddDocumentFieldResponse");
+            cachedSerQNames.add(qName);
+            cls = com.cleverdome.api.AddDocumentFieldResponse.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
+            qName = new javax.xml.namespace.QName("http://tempuri.org/", ">AddDocumentRevision");
+            cachedSerQNames.add(qName);
+            cls = com.cleverdome.api.AddDocumentRevision.class;
+            cachedSerClasses.add(cls);
+            cachedSerFactories.add(beansf);
+            cachedDeserFactories.add(beandf);
+
     }
     private void addBindings2() {
             java.lang.Class cls;
@@ -5316,20 +5271,6 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
-            qName = new javax.xml.namespace.QName("http://tempuri.org/", ">AddDocumentFieldResponse");
-            cachedSerQNames.add(qName);
-            cls = com.cleverdome.api.AddDocumentFieldResponse.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("http://tempuri.org/", ">AddDocumentRevision");
-            cachedSerQNames.add(qName);
-            cls = com.cleverdome.api.AddDocumentRevision.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
             qName = new javax.xml.namespace.QName("http://tempuri.org/", ">AddDocumentRevisionResponse");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.AddDocumentRevisionResponse.class;
@@ -5701,20 +5642,6 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://tempuri.org/", ">CreateNewVendor");
-            cachedSerQNames.add(qName);
-            cls = com.cleverdome.api.CreateNewVendor.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("http://tempuri.org/", ">CreateNewVendorResponse");
-            cachedSerQNames.add(qName);
-            cls = com.cleverdome.api.CreateNewVendorResponse.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
             qName = new javax.xml.namespace.QName("http://tempuri.org/", ">CreateSecurityGroup");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.CreateSecurityGroup.class;
@@ -6016,21 +5943,6 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-    }
-    private void addBindings3() {
-            java.lang.Class cls;
-            javax.xml.namespace.QName qName;
-            javax.xml.namespace.QName qName2;
-            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
-            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
-            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
-            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
-            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
-            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
-            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
-            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
-            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
-            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://tempuri.org/", ">GetArchiveInfoForDocumentResponse");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.GetArchiveInfoForDocumentResponse.class;
@@ -6059,6 +5971,21 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+    }
+    private void addBindings3() {
+            java.lang.Class cls;
+            javax.xml.namespace.QName qName;
+            javax.xml.namespace.QName qName2;
+            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
+            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
+            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
+            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
+            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
+            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
+            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
+            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
+            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
+            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://tempuri.org/", ">GetAvailableFieldsResponse");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.GetAvailableFieldsResponse.class;
@@ -6731,21 +6658,6 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-    }
-    private void addBindings4() {
-            java.lang.Class cls;
-            javax.xml.namespace.QName qName;
-            javax.xml.namespace.QName qName2;
-            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
-            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
-            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
-            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
-            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
-            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
-            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
-            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
-            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
-            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://tempuri.org/", ">GetFilterDocumentsResponse");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.GetFilterDocumentsResponse.class;
@@ -6774,6 +6686,21 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+    }
+    private void addBindings4() {
+            java.lang.Class cls;
+            javax.xml.namespace.QName qName;
+            javax.xml.namespace.QName qName2;
+            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
+            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
+            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
+            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
+            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
+            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
+            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
+            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
+            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
+            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://tempuri.org/", ">GetIntegratedFieldTypesForDocumentResponse");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.GetIntegratedFieldTypesForDocumentResponse.class;
@@ -7099,20 +7026,6 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             qName = new javax.xml.namespace.QName("http://tempuri.org/", ">GetUserTagsResponse");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.GetUserTagsResponse.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("http://tempuri.org/", ">GetVendorCertInfo");
-            cachedSerQNames.add(qName);
-            cls = com.cleverdome.api.GetVendorCertInfo.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("http://tempuri.org/", ">GetVendorCertInfoResponse");
-            cachedSerQNames.add(qName);
-            cls = com.cleverdome.api.GetVendorCertInfoResponse.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -7446,21 +7359,6 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-    }
-    private void addBindings5() {
-            java.lang.Class cls;
-            javax.xml.namespace.QName qName;
-            javax.xml.namespace.QName qName2;
-            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
-            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
-            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
-            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
-            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
-            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
-            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
-            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
-            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
-            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://tempuri.org/", ">RemoveDocumentTypeResponse");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.RemoveDocumentTypeResponse.class;
@@ -7503,6 +7401,21 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+    }
+    private void addBindings5() {
+            java.lang.Class cls;
+            javax.xml.namespace.QName qName;
+            javax.xml.namespace.QName qName2;
+            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
+            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
+            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
+            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
+            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
+            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
+            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
+            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
+            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
+            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://tempuri.org/", ">RemoveSecurityGroupFromDocument");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.RemoveSecurityGroupFromDocument.class;
@@ -7832,20 +7745,6 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://tempuri.org/", ">UpdateVendorCert");
-            cachedSerQNames.add(qName);
-            cls = com.cleverdome.api.UpdateVendorCert.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("http://tempuri.org/", ">UpdateVendorCertResponse");
-            cachedSerQNames.add(qName);
-            cls = com.cleverdome.api.UpdateVendorCertResponse.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
             qName = new javax.xml.namespace.QName("http://tempuri.org/", ">UpdateWorkflowForDocument");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.api.UpdateWorkflowForDocument.class;
@@ -7982,80 +7881,12 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         }
     }
 
-    public com.cleverdome.api.OperationResultOfVendorInfo52SKXdDF getVendorCertInfo(java.lang.String sessionID) throws java.rmi.RemoteException {
+    public com.cleverdome.api.OperationResultOfdateTime archiveDocumentRevisions(java.lang.String sessionID, java.lang.String[] revisionGuids, java.lang.Integer daysAmount) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
         _call.setOperation(_operations[0]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetVendorCertInfo");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://tempuri.org/", "GetVendorCertInfo"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sessionID});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (com.cleverdome.api.OperationResultOfVendorInfo52SKXdDF) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (com.cleverdome.api.OperationResultOfVendorInfo52SKXdDF) org.apache.axis.utils.JavaUtils.convert(_resp, com.cleverdome.api.OperationResultOfVendorInfo52SKXdDF.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public com.cleverdome.api.UploadResultOfVendorInfo52SKXdDF updateVendorCert(byte[] inputStream) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[1]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("http://tempuri.org/IWidgets/UpdateVendorCert");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://tempuri.org/", "UpdateVendorCert"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {inputStream});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (com.cleverdome.api.UploadResultOfVendorInfo52SKXdDF) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (com.cleverdome.api.UploadResultOfVendorInfo52SKXdDF) org.apache.axis.utils.JavaUtils.convert(_resp, com.cleverdome.api.UploadResultOfVendorInfo52SKXdDF.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public com.cleverdome.api.OperationResultOfdateTime archiveDocumentRevisions(java.lang.String sessionID, java.lang.String[] revisionGuids, java.lang.Integer retentionPeriod, java.lang.Integer retentionUnit) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[2]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/ArchiveDocumentRevisions");
         _call.setEncodingStyle(null);
@@ -8066,7 +7897,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sessionID, revisionGuids, retentionPeriod, retentionUnit});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sessionID, revisionGuids, daysAmount});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -8084,46 +7915,12 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
 }
     }
 
-    public com.cleverdome.api.OperationResultOfboolean createNewVendor(java.lang.String sessionID, java.lang.String name) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[3]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("http://tempuri.org/IWidgets/CreateNewVendor");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://tempuri.org/", "CreateNewVendor"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sessionID, name});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (com.cleverdome.api.OperationResultOfboolean) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (com.cleverdome.api.OperationResultOfboolean) org.apache.axis.utils.JavaUtils.convert(_resp, com.cleverdome.api.OperationResultOfboolean.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
     public com.cleverdome.api.OperationResultOfboolean isCurrentRevisionViewedByCurrentUser(java.lang.String sessionID, java.lang.String documentGuid) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[4]);
+        _call.setOperation(_operations[1]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/IsCurrentRevisionViewedByCurrentUser");
         _call.setEncodingStyle(null);
@@ -8157,7 +7954,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[5]);
+        _call.setOperation(_operations[2]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddDocumentEvent");
         _call.setEncodingStyle(null);
@@ -8191,7 +7988,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[6]);
+        _call.setOperation(_operations[3]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentsForEventsNotArchived");
         _call.setEncodingStyle(null);
@@ -8225,7 +8022,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[7]);
+        _call.setOperation(_operations[4]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/MarkForArchive");
         _call.setEncodingStyle(null);
@@ -8259,7 +8056,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[8]);
+        _call.setOperation(_operations[5]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/MarkedForArchival");
         _call.setEncodingStyle(null);
@@ -8293,7 +8090,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[9]);
+        _call.setOperation(_operations[6]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/ArchiveLatestVesion");
         _call.setEncodingStyle(null);
@@ -8327,7 +8124,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[10]);
+        _call.setOperation(_operations[7]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveDocumentIndex");
         _call.setEncodingStyle(null);
@@ -8361,7 +8158,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[11]);
+        _call.setOperation(_operations[8]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/UpdateWorkflowPendingDocument");
         _call.setEncodingStyle(null);
@@ -8395,7 +8192,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[12]);
+        _call.setOperation(_operations[9]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetQualityReviewReport");
         _call.setEncodingStyle(null);
@@ -8422,7 +8219,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[13]);
+        _call.setOperation(_operations[10]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetObjectLayout");
         _call.setEncodingStyle(null);
@@ -8449,7 +8246,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[14]);
+        _call.setOperation(_operations[11]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/UpdateWorkflowForDocument");
         _call.setEncodingStyle(null);
@@ -8483,7 +8280,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[15]);
+        _call.setOperation(_operations[12]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddTermToSearchStatistics");
         _call.setEncodingStyle(null);
@@ -8517,7 +8314,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[16]);
+        _call.setOperation(_operations[13]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddFacetToSearchStatistics");
         _call.setEncodingStyle(null);
@@ -8551,7 +8348,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[17]);
+        _call.setOperation(_operations[14]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddDocumentSelectionStatistics");
         _call.setEncodingStyle(null);
@@ -8585,7 +8382,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[18]);
+        _call.setOperation(_operations[15]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentsInProcessing");
         _call.setEncodingStyle(null);
@@ -8619,7 +8416,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[19]);
+        _call.setOperation(_operations[16]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetRecentDocuments");
         _call.setEncodingStyle(null);
@@ -8653,7 +8450,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[20]);
+        _call.setOperation(_operations[17]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentsWithUpdates");
         _call.setEncodingStyle(null);
@@ -8687,7 +8484,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[21]);
+        _call.setOperation(_operations[18]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetTrustedUsers");
         _call.setEncodingStyle(null);
@@ -8721,7 +8518,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[22]);
+        _call.setOperation(_operations[19]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddTrustedUser");
         _call.setEncodingStyle(null);
@@ -8755,7 +8552,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[23]);
+        _call.setOperation(_operations[20]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/DeleteTrustedUser");
         _call.setEncodingStyle(null);
@@ -8789,7 +8586,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[24]);
+        _call.setOperation(_operations[21]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SendInviteTrustedUser");
         _call.setEncodingStyle(null);
@@ -8823,7 +8620,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[25]);
+        _call.setOperation(_operations[22]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/InviteTrustedUser");
         _call.setEncodingStyle(null);
@@ -8857,7 +8654,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[26]);
+        _call.setOperation(_operations[23]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentsSharingInfo");
         _call.setEncodingStyle(null);
@@ -8891,7 +8688,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[27]);
+        _call.setOperation(_operations[24]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SetPermissionsForUser");
         _call.setEncodingStyle(null);
@@ -8925,7 +8722,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[28]);
+        _call.setOperation(_operations[25]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/ShareDocument");
         _call.setEncodingStyle(null);
@@ -8959,7 +8756,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[29]);
+        _call.setOperation(_operations[26]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/ShareAllDocuments");
         _call.setEncodingStyle(null);
@@ -8993,7 +8790,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[30]);
+        _call.setOperation(_operations[27]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveSharedDocumentRights");
         _call.setEncodingStyle(null);
@@ -9027,7 +8824,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[31]);
+        _call.setOperation(_operations[28]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/ChangSharedDocumentSecurityLevel");
         _call.setEncodingStyle(null);
@@ -9061,7 +8858,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[32]);
+        _call.setOperation(_operations[29]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/ChangSharedDocumentExpiration");
         _call.setEncodingStyle(null);
@@ -9095,7 +8892,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[33]);
+        _call.setOperation(_operations[30]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/IsEnoughSpaceToUploadFile");
         _call.setEncodingStyle(null);
@@ -9129,7 +8926,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[34]);
+        _call.setOperation(_operations[31]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/CheckIfCanUploadDocument");
         _call.setEncodingStyle(null);
@@ -9163,7 +8960,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[35]);
+        _call.setOperation(_operations[32]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/CheckIfCanReuploadDocument");
         _call.setEncodingStyle(null);
@@ -9197,7 +8994,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[36]);
+        _call.setOperation(_operations[33]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetBucketQuotaInfo");
         _call.setEncodingStyle(null);
@@ -9231,7 +9028,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[37]);
+        _call.setOperation(_operations[34]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/LockUnlockDocsForDelete");
         _call.setEncodingStyle(null);
@@ -9260,12 +9057,12 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
 }
     }
 
-    public com.cleverdome.api.OperationResultOfdateTime archiveDocuments(java.lang.String sessionID, java.lang.String[] documentGuids, java.lang.Integer retentionPeriod, java.lang.Integer retentionUnit) throws java.rmi.RemoteException {
+    public com.cleverdome.api.OperationResultOfdateTime archiveDocuments(java.lang.String sessionID, java.lang.String[] documentGuids, java.lang.Integer daysAmount) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[38]);
+        _call.setOperation(_operations[35]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/ArchiveDocuments");
         _call.setEncodingStyle(null);
@@ -9276,7 +9073,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sessionID, documentGuids, retentionPeriod, retentionUnit});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sessionID, documentGuids, daysAmount});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
@@ -9299,7 +9096,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[39]);
+        _call.setOperation(_operations[36]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentActiveBarcodes");
         _call.setEncodingStyle(null);
@@ -9333,7 +9130,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[40]);
+        _call.setOperation(_operations[37]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddDocumentRevision");
         _call.setEncodingStyle(null);
@@ -9367,7 +9164,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[41]);
+        _call.setOperation(_operations[38]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddExternalDocumentRevision");
         _call.setEncodingStyle(null);
@@ -9401,7 +9198,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[42]);
+        _call.setOperation(_operations[39]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/DownloadDocumentRevision");
         _call.setEncodingStyle(null);
@@ -9435,7 +9232,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[43]);
+        _call.setOperation(_operations[40]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentHTML");
         _call.setEncodingStyle(null);
@@ -9469,7 +9266,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[44]);
+        _call.setOperation(_operations[41]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/DownloadDocumentHeadRevision");
         _call.setEncodingStyle(null);
@@ -9503,7 +9300,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[45]);
+        _call.setOperation(_operations[42]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentsArchive");
         _call.setEncodingStyle(null);
@@ -9537,7 +9334,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[46]);
+        _call.setOperation(_operations[43]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/DownloadDocuments");
         _call.setEncodingStyle(null);
@@ -9571,7 +9368,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[47]);
+        _call.setOperation(_operations[44]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetSpecifiedDocsDownloadID");
         _call.setEncodingStyle(null);
@@ -9605,7 +9402,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[48]);
+        _call.setOperation(_operations[45]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetAllFilteredDocsDownloadID");
         _call.setEncodingStyle(null);
@@ -9639,7 +9436,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[49]);
+        _call.setOperation(_operations[46]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/BulkUploadDocuments");
         _call.setEncodingStyle(null);
@@ -9673,7 +9470,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[50]);
+        _call.setOperation(_operations[47]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetLackDeletePermissionDocuments");
         _call.setEncodingStyle(null);
@@ -9707,7 +9504,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[51]);
+        _call.setOperation(_operations[48]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveDocument");
         _call.setEncodingStyle(null);
@@ -9741,7 +9538,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[52]);
+        _call.setOperation(_operations[49]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveDocuments");
         _call.setEncodingStyle(null);
@@ -9775,7 +9572,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[53]);
+        _call.setOperation(_operations[50]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/DeleteDocumentsPermamently");
         _call.setEncodingStyle(null);
@@ -9809,7 +9606,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[54]);
+        _call.setOperation(_operations[51]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveAllDocuments");
         _call.setEncodingStyle(null);
@@ -9843,7 +9640,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[55]);
+        _call.setOperation(_operations[52]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RepairRemovedDocuments");
         _call.setEncodingStyle(null);
@@ -9877,7 +9674,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[56]);
+        _call.setOperation(_operations[53]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RepairAllRemovedDocuments");
         _call.setEncodingStyle(null);
@@ -9911,7 +9708,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[57]);
+        _call.setOperation(_operations[54]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentNotes");
         _call.setEncodingStyle(null);
@@ -9945,7 +9742,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[58]);
+        _call.setOperation(_operations[55]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/CreateDocumentNote");
         _call.setEncodingStyle(null);
@@ -9979,7 +9776,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[59]);
+        _call.setOperation(_operations[56]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentPages");
         _call.setEncodingStyle(null);
@@ -10013,7 +9810,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[60]);
+        _call.setOperation(_operations[57]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/BurnAnnotations");
         _call.setEncodingStyle(null);
@@ -10047,7 +9844,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[61]);
+        _call.setOperation(_operations[58]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SetAnnotation");
         _call.setEncodingStyle(null);
@@ -10081,7 +9878,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[62]);
+        _call.setOperation(_operations[59]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentPreviewInfo");
         _call.setEncodingStyle(null);
@@ -10115,7 +9912,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[63]);
+        _call.setOperation(_operations[60]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SetupBatchForDocument");
         _call.setEncodingStyle(null);
@@ -10149,7 +9946,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[64]);
+        _call.setOperation(_operations[61]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentBatches");
         _call.setEncodingStyle(null);
@@ -10183,7 +9980,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[65]);
+        _call.setOperation(_operations[62]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetBatchItems");
         _call.setEncodingStyle(null);
@@ -10217,7 +10014,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[66]);
+        _call.setOperation(_operations[63]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentBatchItemsForApproval");
         _call.setEncodingStyle(null);
@@ -10251,7 +10048,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[67]);
+        _call.setOperation(_operations[64]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/CopyMetadataToNextBatchItem");
         _call.setEncodingStyle(null);
@@ -10285,7 +10082,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[68]);
+        _call.setOperation(_operations[65]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentBarcodes");
         _call.setEncodingStyle(null);
@@ -10319,7 +10116,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[69]);
+        _call.setOperation(_operations[66]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SaveDocumentBarcode");
         _call.setEncodingStyle(null);
@@ -10353,7 +10150,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[70]);
+        _call.setOperation(_operations[67]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentLockInformation");
         _call.setEncodingStyle(null);
@@ -10387,7 +10184,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[71]);
+        _call.setOperation(_operations[68]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/LockDocument");
         _call.setEncodingStyle(null);
@@ -10421,7 +10218,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[72]);
+        _call.setOperation(_operations[69]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveDocumentLock");
         _call.setEncodingStyle(null);
@@ -10455,7 +10252,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[73]);
+        _call.setOperation(_operations[70]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetWorkflowEvents");
         _call.setEncodingStyle(null);
@@ -10489,7 +10286,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[74]);
+        _call.setOperation(_operations[71]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetWorkflowEventsCurrentRevision");
         _call.setEncodingStyle(null);
@@ -10523,7 +10320,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[75]);
+        _call.setOperation(_operations[72]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetWorkflowEvent");
         _call.setEncodingStyle(null);
@@ -10557,7 +10354,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[76]);
+        _call.setOperation(_operations[73]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetUserDefinedMetadata");
         _call.setEncodingStyle(null);
@@ -10591,7 +10388,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[77]);
+        _call.setOperation(_operations[74]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SetMetadataValues");
         _call.setEncodingStyle(null);
@@ -10625,7 +10422,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[78]);
+        _call.setOperation(_operations[75]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetIntegratedMetadata");
         _call.setEncodingStyle(null);
@@ -10659,7 +10456,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[79]);
+        _call.setOperation(_operations[76]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetIntegratedFieldTypesForDocument");
         _call.setEncodingStyle(null);
@@ -10693,7 +10490,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[80]);
+        _call.setOperation(_operations[77]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetAllAvailableDocumentFieldTypesDetailed");
         _call.setEncodingStyle(null);
@@ -10727,7 +10524,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[81]);
+        _call.setOperation(_operations[78]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentsByMetadataValue");
         _call.setEncodingStyle(null);
@@ -10761,7 +10558,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[82]);
+        _call.setOperation(_operations[79]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetMetadataValuesForFieldType");
         _call.setEncodingStyle(null);
@@ -10795,7 +10592,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[83]);
+        _call.setOperation(_operations[80]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetTemplatesByMetadata");
         _call.setEncodingStyle(null);
@@ -10829,7 +10626,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[84]);
+        _call.setOperation(_operations[81]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentTypesByMetadata");
         _call.setEncodingStyle(null);
@@ -10863,7 +10660,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[85]);
+        _call.setOperation(_operations[82]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetApplications");
         _call.setEncodingStyle(null);
@@ -10897,7 +10694,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[86]);
+        _call.setOperation(_operations[83]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDefaulTemplateAndDescription");
         _call.setEncodingStyle(null);
@@ -10931,7 +10728,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[87]);
+        _call.setOperation(_operations[84]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentEsignInfo");
         _call.setEncodingStyle(null);
@@ -10965,7 +10762,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[88]);
+        _call.setOperation(_operations[85]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetEsignEnvelopes");
         _call.setEncodingStyle(null);
@@ -10999,7 +10796,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[89]);
+        _call.setOperation(_operations[86]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetAllEsignStatuses");
         _call.setEncodingStyle(null);
@@ -11033,7 +10830,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[90]);
+        _call.setOperation(_operations[87]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetSecurityGroupsByType");
         _call.setEncodingStyle(null);
@@ -11067,7 +10864,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[91]);
+        _call.setOperation(_operations[88]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetSecurityGroups");
         _call.setEncodingStyle(null);
@@ -11101,7 +10898,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[92]);
+        _call.setOperation(_operations[89]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetSecurityGroupByID");
         _call.setEncodingStyle(null);
@@ -11135,7 +10932,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[93]);
+        _call.setOperation(_operations[90]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/CreateSecurityGroup");
         _call.setEncodingStyle(null);
@@ -11169,7 +10966,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[94]);
+        _call.setOperation(_operations[91]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveSecurityGroup");
         _call.setEncodingStyle(null);
@@ -11203,7 +11000,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[95]);
+        _call.setOperation(_operations[92]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetUsersForGroup");
         _call.setEncodingStyle(null);
@@ -11237,7 +11034,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[96]);
+        _call.setOperation(_operations[93]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetUserSecurityGroups");
         _call.setEncodingStyle(null);
@@ -11271,7 +11068,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[97]);
+        _call.setOperation(_operations[94]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddUserToSecurityGroup");
         _call.setEncodingStyle(null);
@@ -11305,7 +11102,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[98]);
+        _call.setOperation(_operations[95]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveUserFromSecurityGroup");
         _call.setEncodingStyle(null);
@@ -11339,7 +11136,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[99]);
+        _call.setOperation(_operations[96]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SearchUsers");
         _call.setEncodingStyle(null);
@@ -11373,7 +11170,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[100]);
+        _call.setOperation(_operations[97]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetUserDataByEmail");
         _call.setEncodingStyle(null);
@@ -11407,7 +11204,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[101]);
+        _call.setOperation(_operations[98]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SearchSecurityGroup");
         _call.setEncodingStyle(null);
@@ -11441,7 +11238,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[102]);
+        _call.setOperation(_operations[99]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SearchSecurityGroupNotAdded");
         _call.setEncodingStyle(null);
@@ -11475,7 +11272,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[103]);
+        _call.setOperation(_operations[100]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveSecurityGroupFromDocument");
         _call.setEncodingStyle(null);
@@ -11509,7 +11306,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[104]);
+        _call.setOperation(_operations[101]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetSecurityGroupTypes");
         _call.setEncodingStyle(null);
@@ -11543,7 +11340,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[105]);
+        _call.setOperation(_operations[102]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveAllSecurityGroupsFromDocument");
         _call.setEncodingStyle(null);
@@ -11577,7 +11374,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[106]);
+        _call.setOperation(_operations[103]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AttachSecurityGroupsToDocument");
         _call.setEncodingStyle(null);
@@ -11611,7 +11408,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[107]);
+        _call.setOperation(_operations[104]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetPermissionsForCurrentUser");
         _call.setEncodingStyle(null);
@@ -11645,7 +11442,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[108]);
+        _call.setOperation(_operations[105]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetBatchIDForCriteria");
         _call.setEncodingStyle(null);
@@ -11679,7 +11476,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[109]);
+        _call.setOperation(_operations[106]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/MarkRequiredDocumentsComplete");
         _call.setEncodingStyle(null);
@@ -11713,7 +11510,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[110]);
+        _call.setOperation(_operations[107]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/UserCanEditMetadata");
         _call.setEncodingStyle(null);
@@ -11747,7 +11544,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[111]);
+        _call.setOperation(_operations[108]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentRevisions");
         _call.setEncodingStyle(null);
@@ -11781,7 +11578,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[112]);
+        _call.setOperation(_operations[109]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocument");
         _call.setEncodingStyle(null);
@@ -11815,7 +11612,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[113]);
+        _call.setOperation(_operations[110]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentDetailedMetadataInfo");
         _call.setEncodingStyle(null);
@@ -11849,7 +11646,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[114]);
+        _call.setOperation(_operations[111]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentMetadata");
         _call.setEncodingStyle(null);
@@ -11883,7 +11680,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[115]);
+        _call.setOperation(_operations[112]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentMetadataBase");
         _call.setEncodingStyle(null);
@@ -11917,7 +11714,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[116]);
+        _call.setOperation(_operations[113]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetAllowedFieldsForDocument");
         _call.setEncodingStyle(null);
@@ -11951,7 +11748,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[117]);
+        _call.setOperation(_operations[114]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetAvailableFields");
         _call.setEncodingStyle(null);
@@ -11985,7 +11782,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[118]);
+        _call.setOperation(_operations[115]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentRequiredFields");
         _call.setEncodingStyle(null);
@@ -12019,7 +11816,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[119]);
+        _call.setOperation(_operations[116]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddDocumentField");
         _call.setEncodingStyle(null);
@@ -12053,7 +11850,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[120]);
+        _call.setOperation(_operations[117]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveDocumentField");
         _call.setEncodingStyle(null);
@@ -12087,7 +11884,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[121]);
+        _call.setOperation(_operations[118]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveDocumentFieldByValue");
         _call.setEncodingStyle(null);
@@ -12121,7 +11918,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[122]);
+        _call.setOperation(_operations[119]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentTags");
         _call.setEncodingStyle(null);
@@ -12155,7 +11952,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[123]);
+        _call.setOperation(_operations[120]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetUserTags");
         _call.setEncodingStyle(null);
@@ -12189,7 +11986,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[124]);
+        _call.setOperation(_operations[121]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddDocumentTag");
         _call.setEncodingStyle(null);
@@ -12223,7 +12020,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[125]);
+        _call.setOperation(_operations[122]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddTagsToDocuments");
         _call.setEncodingStyle(null);
@@ -12257,7 +12054,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[126]);
+        _call.setOperation(_operations[123]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/EditDocumentsTags");
         _call.setEncodingStyle(null);
@@ -12291,7 +12088,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[127]);
+        _call.setOperation(_operations[124]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/EditAllDocumentsTags");
         _call.setEncodingStyle(null);
@@ -12325,7 +12122,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[128]);
+        _call.setOperation(_operations[125]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveDocumentTag");
         _call.setEncodingStyle(null);
@@ -12359,7 +12156,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[129]);
+        _call.setOperation(_operations[126]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveDocumentTagByName");
         _call.setEncodingStyle(null);
@@ -12393,7 +12190,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[130]);
+        _call.setOperation(_operations[127]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentMetadataHierarchy");
         _call.setEncodingStyle(null);
@@ -12427,7 +12224,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[131]);
+        _call.setOperation(_operations[128]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetMetadataHierarchysBehalfUser");
         _call.setEncodingStyle(null);
@@ -12461,7 +12258,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[132]);
+        _call.setOperation(_operations[129]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddMetadataHierarchyNode");
         _call.setEncodingStyle(null);
@@ -12495,7 +12292,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[133]);
+        _call.setOperation(_operations[130]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/MoveMetadataHierarchyNode");
         _call.setEncodingStyle(null);
@@ -12529,7 +12326,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[134]);
+        _call.setOperation(_operations[131]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveMetadataHierarchyNode");
         _call.setEncodingStyle(null);
@@ -12563,7 +12360,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[135]);
+        _call.setOperation(_operations[132]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RenameMetadataHierarchyNode");
         _call.setEncodingStyle(null);
@@ -12597,7 +12394,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[136]);
+        _call.setOperation(_operations[133]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/CreateUserTagAlert");
         _call.setEncodingStyle(null);
@@ -12631,7 +12428,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[137]);
+        _call.setOperation(_operations[134]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/UpdateUserTagAlert");
         _call.setEncodingStyle(null);
@@ -12665,7 +12462,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[138]);
+        _call.setOperation(_operations[135]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/DeleteUserTagAlert");
         _call.setEncodingStyle(null);
@@ -12699,7 +12496,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[139]);
+        _call.setOperation(_operations[136]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetAvailableFieldTypesForDocumentType");
         _call.setEncodingStyle(null);
@@ -12733,7 +12530,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[140]);
+        _call.setOperation(_operations[137]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddFieldToDocumentType");
         _call.setEncodingStyle(null);
@@ -12767,7 +12564,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[141]);
+        _call.setOperation(_operations[138]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveFieldFromDocumentType");
         _call.setEncodingStyle(null);
@@ -12801,7 +12598,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[142]);
+        _call.setOperation(_operations[139]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetAllFieldTypes");
         _call.setEncodingStyle(null);
@@ -12835,7 +12632,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[143]);
+        _call.setOperation(_operations[140]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SearchDocumentMetadata");
         _call.setEncodingStyle(null);
@@ -12869,7 +12666,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[144]);
+        _call.setOperation(_operations[141]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetFacetSearchSuggest");
         _call.setEncodingStyle(null);
@@ -12903,7 +12700,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[145]);
+        _call.setOperation(_operations[142]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetFacetFieldNames");
         _call.setEncodingStyle(null);
@@ -12937,7 +12734,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[146]);
+        _call.setOperation(_operations[143]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SearchFacetValues");
         _call.setEncodingStyle(null);
@@ -12971,7 +12768,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[147]);
+        _call.setOperation(_operations[144]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetAllSearcheableFields");
         _call.setEncodingStyle(null);
@@ -13005,7 +12802,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[148]);
+        _call.setOperation(_operations[145]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDashboardEvents");
         _call.setEncodingStyle(null);
@@ -13039,7 +12836,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[149]);
+        _call.setOperation(_operations[146]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetEventsForDocument");
         _call.setEncodingStyle(null);
@@ -13073,7 +12870,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[150]);
+        _call.setOperation(_operations[147]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetArchiveInfoForDocument");
         _call.setEncodingStyle(null);
@@ -13107,7 +12904,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[151]);
+        _call.setOperation(_operations[148]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SetDefaultDescriptionForApplication");
         _call.setEncodingStyle(null);
@@ -13141,7 +12938,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[152]);
+        _call.setOperation(_operations[149]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentsForEventsByMetaValue");
         _call.setEncodingStyle(null);
@@ -13175,7 +12972,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[153]);
+        _call.setOperation(_operations[150]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentsForEvents");
         _call.setEncodingStyle(null);
@@ -13209,7 +13006,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[154]);
+        _call.setOperation(_operations[151]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetListOfDocumentsByEvent");
         _call.setEncodingStyle(null);
@@ -13243,7 +13040,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[155]);
+        _call.setOperation(_operations[152]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetFilterDocuments");
         _call.setEncodingStyle(null);
@@ -13277,7 +13074,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[156]);
+        _call.setOperation(_operations[153]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetFilterDocumentsWithMetadata");
         _call.setEncodingStyle(null);
@@ -13311,7 +13108,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[157]);
+        _call.setOperation(_operations[154]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDeactivatedDocuments");
         _call.setEncodingStyle(null);
@@ -13345,7 +13142,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[158]);
+        _call.setOperation(_operations[155]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/ChangeDocumentApplication");
         _call.setEncodingStyle(null);
@@ -13379,7 +13176,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[159]);
+        _call.setOperation(_operations[156]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetAvailableDocumentEventsForApplication");
         _call.setEncodingStyle(null);
@@ -13413,7 +13210,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[160]);
+        _call.setOperation(_operations[157]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetAllDocumentEvents");
         _call.setEncodingStyle(null);
@@ -13447,7 +13244,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[161]);
+        _call.setOperation(_operations[158]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetRelatedDocuments");
         _call.setEncodingStyle(null);
@@ -13481,7 +13278,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[162]);
+        _call.setOperation(_operations[159]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumensByTags");
         _call.setEncodingStyle(null);
@@ -13515,7 +13312,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[163]);
+        _call.setOperation(_operations[160]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentsInfoByMetadataValue");
         _call.setEncodingStyle(null);
@@ -13549,7 +13346,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[164]);
+        _call.setOperation(_operations[161]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentsBehalfSharedUser");
         _call.setEncodingStyle(null);
@@ -13583,7 +13380,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[165]);
+        _call.setOperation(_operations[162]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetPermittedTagTrees");
         _call.setEncodingStyle(null);
@@ -13617,7 +13414,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[166]);
+        _call.setOperation(_operations[163]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/CreateDocumentTemplate");
         _call.setEncodingStyle(null);
@@ -13651,7 +13448,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[167]);
+        _call.setOperation(_operations[164]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveDocumentTemplate");
         _call.setEncodingStyle(null);
@@ -13685,7 +13482,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[168]);
+        _call.setOperation(_operations[165]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/UnlinkTemplate");
         _call.setEncodingStyle(null);
@@ -13719,7 +13516,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[169]);
+        _call.setOperation(_operations[166]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetAllDocumentTemplates");
         _call.setEncodingStyle(null);
@@ -13753,7 +13550,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[170]);
+        _call.setOperation(_operations[167]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentTemplate");
         _call.setEncodingStyle(null);
@@ -13787,7 +13584,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[171]);
+        _call.setOperation(_operations[168]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentTemplates");
         _call.setEncodingStyle(null);
@@ -13821,7 +13618,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[172]);
+        _call.setOperation(_operations[169]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/SetDocumentTemplate");
         _call.setEncodingStyle(null);
@@ -13855,7 +13652,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[173]);
+        _call.setOperation(_operations[170]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/CreateDocumentType");
         _call.setEncodingStyle(null);
@@ -13889,7 +13686,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[174]);
+        _call.setOperation(_operations[171]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/RemoveDocumentType");
         _call.setEncodingStyle(null);
@@ -13923,7 +13720,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[175]);
+        _call.setOperation(_operations[172]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentType");
         _call.setEncodingStyle(null);
@@ -13957,7 +13754,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[176]);
+        _call.setOperation(_operations[173]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentTypes");
         _call.setEncodingStyle(null);
@@ -13991,7 +13788,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[177]);
+        _call.setOperation(_operations[174]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetAllDocumentTypes");
         _call.setEncodingStyle(null);
@@ -14025,7 +13822,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[178]);
+        _call.setOperation(_operations[175]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/UploadFile");
         _call.setEncodingStyle(null);
@@ -14059,7 +13856,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[179]);
+        _call.setOperation(_operations[176]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/FlxFileUpload");
         _call.setEncodingStyle(null);
@@ -14093,7 +13890,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[180]);
+        _call.setOperation(_operations[177]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/UploadFileJava");
         _call.setEncodingStyle(null);
@@ -14127,7 +13924,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[181]);
+        _call.setOperation(_operations[178]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/AddNewExternalDocument");
         _call.setEncodingStyle(null);
@@ -14161,7 +13958,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[182]);
+        _call.setOperation(_operations[179]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentDetailed");
         _call.setEncodingStyle(null);
@@ -14195,7 +13992,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[183]);
+        _call.setOperation(_operations[180]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("http://tempuri.org/IWidgets/GetDocumentDetailedWithoutPages");
         _call.setEncodingStyle(null);

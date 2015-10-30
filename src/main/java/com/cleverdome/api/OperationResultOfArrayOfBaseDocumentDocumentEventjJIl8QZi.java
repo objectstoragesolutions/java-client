@@ -7,12 +7,8 @@
 
 package com.cleverdome.api;
 
-public class OperationResultOfArrayOfBaseDocumentDocumentEventjJIl8QZi  implements java.io.Serializable {
-    private java.lang.String message;
-
+public class OperationResultOfArrayOfBaseDocumentDocumentEventjJIl8QZi  extends com.cleverdome.api.OperationResult  implements java.io.Serializable {
     private com.cleverdome.api.UserPermissions permissions;
-
-    private com.cleverdome.api.ResultType result;
 
     private com.cleverdome.api.BaseDocumentDocumentEvent[] returnValue;
 
@@ -21,33 +17,14 @@ public class OperationResultOfArrayOfBaseDocumentDocumentEventjJIl8QZi  implemen
 
     public OperationResultOfArrayOfBaseDocumentDocumentEventjJIl8QZi(
            java.lang.String message,
-           com.cleverdome.api.UserPermissions permissions,
            com.cleverdome.api.ResultType result,
+           com.cleverdome.api.UserPermissions permissions,
            com.cleverdome.api.BaseDocumentDocumentEvent[] returnValue) {
-           this.message = message;
-           this.permissions = permissions;
-           this.result = result;
-           this.returnValue = returnValue;
-    }
-
-
-    /**
-     * Gets the message value for this OperationResultOfArrayOfBaseDocumentDocumentEventjJIl8QZi.
-     * 
-     * @return message
-     */
-    public java.lang.String getMessage() {
-        return message;
-    }
-
-
-    /**
-     * Sets the message value for this OperationResultOfArrayOfBaseDocumentDocumentEventjJIl8QZi.
-     * 
-     * @param message
-     */
-    public void setMessage(java.lang.String message) {
-        this.message = message;
+        super(
+            message,
+            result);
+        this.permissions = permissions;
+        this.returnValue = returnValue;
     }
 
 
@@ -68,26 +45,6 @@ public class OperationResultOfArrayOfBaseDocumentDocumentEventjJIl8QZi  implemen
      */
     public void setPermissions(com.cleverdome.api.UserPermissions permissions) {
         this.permissions = permissions;
-    }
-
-
-    /**
-     * Gets the result value for this OperationResultOfArrayOfBaseDocumentDocumentEventjJIl8QZi.
-     * 
-     * @return result
-     */
-    public com.cleverdome.api.ResultType getResult() {
-        return result;
-    }
-
-
-    /**
-     * Sets the result value for this OperationResultOfArrayOfBaseDocumentDocumentEventjJIl8QZi.
-     * 
-     * @param result
-     */
-    public void setResult(com.cleverdome.api.ResultType result) {
-        this.result = result;
     }
 
 
@@ -121,16 +78,10 @@ public class OperationResultOfArrayOfBaseDocumentDocumentEventjJIl8QZi  implemen
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.message==null && other.getMessage()==null) || 
-             (this.message!=null &&
-              this.message.equals(other.getMessage()))) &&
+        _equals = super.equals(obj) && 
             ((this.permissions==null && other.getPermissions()==null) || 
              (this.permissions!=null &&
               this.permissions.equals(other.getPermissions()))) &&
-            ((this.result==null && other.getResult()==null) || 
-             (this.result!=null &&
-              this.result.equals(other.getResult()))) &&
             ((this.returnValue==null && other.getReturnValue()==null) || 
              (this.returnValue!=null &&
               java.util.Arrays.equals(this.returnValue, other.getReturnValue())));
@@ -144,15 +95,9 @@ public class OperationResultOfArrayOfBaseDocumentDocumentEventjJIl8QZi  implemen
             return 0;
         }
         __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getMessage() != null) {
-            _hashCode += getMessage().hashCode();
-        }
+        int _hashCode = super.hashCode();
         if (getPermissions() != null) {
             _hashCode += getPermissions().hashCode();
-        }
-        if (getResult() != null) {
-            _hashCode += getResult().hashCode();
         }
         if (getReturnValue() != null) {
             for (int i=0;
@@ -176,25 +121,11 @@ public class OperationResultOfArrayOfBaseDocumentDocumentEventjJIl8QZi  implemen
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfArrayOfBaseDocument.DocumentEventjJIl8QZi"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("message");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "Message"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("permissions");
         elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "Permissions"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "UserPermissions"));
         elemField.setMinOccurs(0);
         elemField.setNillable(true);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("result");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "Result"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "ResultType"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("returnValue");
