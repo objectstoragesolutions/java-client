@@ -13,10 +13,7 @@ import javax.xml.rpc.ServiceException;
 
 public class Demo {
     public static void main(String[] args) throws Exception {
-        AxisProperties.setProperty("http.proxyHost", "127.0.0.1");
-        AxisProperties.setProperty("http.proxyPort", "8888");
-        AxisProperties.setProperty("axis.socketSecureFactory","org.apache.axis.components.net.SunFakeTrustSocketFactory");
-
+       
         Properties demoProps = new Properties();
         InputStream inputStream = Demo.class.getResourceAsStream("demo.properties");
         demoProps.load(inputStream);
