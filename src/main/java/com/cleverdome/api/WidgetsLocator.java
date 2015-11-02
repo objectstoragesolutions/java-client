@@ -22,7 +22,7 @@ public class WidgetsLocator extends org.apache.axis.client.Service implements co
     }
 
     // Use to get a proxy class for BasicHttpBinding_IWidgets
-    private java.lang.String BasicHttpBinding_IWidgets_address = "https://sandbox.cleverdome.com/CDWidgets/Services/Widgets.svc/basic";
+    private java.lang.String BasicHttpBinding_IWidgets_address = "https://dev.cleverdome.com/CDWidgets/Services/Widgets.svc/basic";
 
     public java.lang.String getBasicHttpBinding_IWidgetsAddress() {
         return BasicHttpBinding_IWidgets_address;

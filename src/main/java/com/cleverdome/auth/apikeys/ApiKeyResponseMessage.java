@@ -166,31 +166,31 @@ public class ApiKeyResponseMessage  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ApiKeyResponseMessage.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cleverdome.com/apikeys/messages", ">ApiKeyResponseMessage"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cleverdome.com/apikeys", ">ApiKeyResponseMessage"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("errorMessage");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys/contract", "ErrorMessage"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys", "ErrorMessage"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
-        elemField.setNillable(false);
+        elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("isSuccess");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys/contract", "IsSuccess"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys", "IsSuccess"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionID");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys/contract", "SessionID"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys", "SessionID"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sessionTimeOut");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys/contract", "SessionTimeOut"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys", "SessionTimeOut"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

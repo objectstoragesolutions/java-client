@@ -25,11 +25,11 @@ public class BasicHttpBinding_IApiKeyServiceStub extends org.apache.axis.client.
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("Auth");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://cleverdome.com/apikeys/messages", "ApiKeyRequestMessage"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://cleverdome.com/apikeys/messages", ">ApiKeyRequestMessage"), com.cleverdome.auth.apikeys.ApiKeyRequestMessage.class, false, false);
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://cleverdome.com/apikeys", "ApiKeyRequestMessage"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://cleverdome.com/apikeys", ">ApiKeyRequestMessage"), com.cleverdome.auth.apikeys.ApiKeyRequestMessage.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://cleverdome.com/apikeys/messages", ">ApiKeyResponseMessage"));
+        oper.setReturnType(new javax.xml.namespace.QName("http://cleverdome.com/apikeys", ">ApiKeyResponseMessage"));
         oper.setReturnClass(com.cleverdome.auth.apikeys.ApiKeyResponseMessage.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys/messages", "ApiKeyResponseMessage"));
+        oper.setReturnQName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys", "ApiKeyResponseMessage"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[0] = oper;
@@ -65,14 +65,14 @@ public class BasicHttpBinding_IApiKeyServiceStub extends org.apache.axis.client.
             java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
             java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
-            qName = new javax.xml.namespace.QName("http://cleverdome.com/apikeys/messages", ">ApiKeyRequestMessage");
+            qName = new javax.xml.namespace.QName("http://cleverdome.com/apikeys", ">ApiKeyRequestMessage");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.auth.apikeys.ApiKeyRequestMessage.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("http://cleverdome.com/apikeys/messages", ">ApiKeyResponseMessage");
+            qName = new javax.xml.namespace.QName("http://cleverdome.com/apikeys", ">ApiKeyResponseMessage");
             cachedSerQNames.add(qName);
             cls = com.cleverdome.auth.apikeys.ApiKeyResponseMessage.class;
             cachedSerClasses.add(cls);
@@ -168,7 +168,7 @@ public class BasicHttpBinding_IApiKeyServiceStub extends org.apache.axis.client.
         org.apache.axis.client.Call _call = createCall();
         _call.setOperation(_operations[0]);
         _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("http://cleverdome.com/apikeys/contract/IApiKeyService/Auth");
+        _call.setSOAPActionURI("http://cleverdome.com/apikeys/IApiKeyService/Auth");
         _call.setEncodingStyle(null);
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);

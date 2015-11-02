@@ -144,27 +144,28 @@ public class ApiKeyRequestMessage  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ApiKeyRequestMessage.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cleverdome.com/apikeys/messages", ">ApiKeyRequestMessage"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://cleverdome.com/apikeys", ">ApiKeyRequestMessage"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("apiKey");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys/contract", "ApiKey"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys", "ApiKey"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
-        elemField.setNillable(false);
+        elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("ipAddresses");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys/contract", "IpAddresses"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "ArrayOfstring"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys", "IpAddresses"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
-        elemField.setNillable(false);
+        elemField.setNillable(true);
+        elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "string"));
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("userID");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys/contract", "UserID"));
+        elemField.setXmlName(new javax.xml.namespace.QName("http://cleverdome.com/apikeys", "UserID"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
-        elemField.setNillable(false);
+        elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
     }
 
