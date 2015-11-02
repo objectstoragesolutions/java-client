@@ -8,13 +8,13 @@
 package com.cleverdome.api;
 
 public class RemoveUserFromSecurityGroupResponse  implements java.io.Serializable {
-    private com.cleverdome.api.OperationResultOfanyType removeUserFromSecurityGroupResult;
+    private com.cleverdome.api.OperationResult removeUserFromSecurityGroupResult;
 
     public RemoveUserFromSecurityGroupResponse() {
     }
 
     public RemoveUserFromSecurityGroupResponse(
-           com.cleverdome.api.OperationResultOfanyType removeUserFromSecurityGroupResult) {
+           com.cleverdome.api.OperationResult removeUserFromSecurityGroupResult) {
            this.removeUserFromSecurityGroupResult = removeUserFromSecurityGroupResult;
     }
 
@@ -24,7 +24,7 @@ public class RemoveUserFromSecurityGroupResponse  implements java.io.Serializabl
      * 
      * @return removeUserFromSecurityGroupResult
      */
-    public com.cleverdome.api.OperationResultOfanyType getRemoveUserFromSecurityGroupResult() {
+    public com.cleverdome.api.OperationResult getRemoveUserFromSecurityGroupResult() {
         return removeUserFromSecurityGroupResult;
     }
 
@@ -34,7 +34,7 @@ public class RemoveUserFromSecurityGroupResponse  implements java.io.Serializabl
      * 
      * @param removeUserFromSecurityGroupResult
      */
-    public void setRemoveUserFromSecurityGroupResult(com.cleverdome.api.OperationResultOfanyType removeUserFromSecurityGroupResult) {
+    public void setRemoveUserFromSecurityGroupResult(com.cleverdome.api.OperationResult removeUserFromSecurityGroupResult) {
         this.removeUserFromSecurityGroupResult = removeUserFromSecurityGroupResult;
     }
 
@@ -80,7 +80,7 @@ public class RemoveUserFromSecurityGroupResponse  implements java.io.Serializabl
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("removeUserFromSecurityGroupResult");
         elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveUserFromSecurityGroupResult"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfanyType"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResult"));
         elemField.setMinOccurs(0);
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);

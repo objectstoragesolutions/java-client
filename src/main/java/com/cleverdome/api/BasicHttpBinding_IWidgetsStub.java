@@ -1838,8 +1838,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "securityGroupID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), java.lang.Integer.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfanyType"));
-        oper.setReturnClass(com.cleverdome.api.OperationResultOfanyType.class);
+        oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResult"));
+        oper.setReturnClass(com.cleverdome.api.OperationResult.class);
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveSecurityGroupResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
@@ -1912,8 +1912,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "userID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), java.lang.Integer.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfanyType"));
-        oper.setReturnClass(com.cleverdome.api.OperationResultOfanyType.class);
+        oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResult"));
+        oper.setReturnClass(com.cleverdome.api.OperationResult.class);
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveUserFromSecurityGroupResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
@@ -2006,8 +2006,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "securityGroupID"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), java.lang.Integer.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfanyType"));
-        oper.setReturnClass(com.cleverdome.api.OperationResultOfanyType.class);
+        oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResult"));
+        oper.setReturnClass(com.cleverdome.api.OperationResult.class);
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveSecurityGroupFromDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
@@ -2056,8 +2056,8 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "securityLevel"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), java.lang.Integer.class, false, false);
         param.setOmittable(true);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfanyType"));
-        oper.setReturnClass(com.cleverdome.api.OperationResultOfanyType.class);
+        oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResult"));
+        oper.setReturnClass(com.cleverdome.api.OperationResult.class);
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "AttachSecurityGroupsToDocumentResult"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
@@ -10961,7 +10961,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
 }
     }
 
-    public com.cleverdome.api.OperationResultOfanyType removeSecurityGroup(java.lang.String sessionID, java.lang.Integer securityGroupID) throws java.rmi.RemoteException {
+    public com.cleverdome.api.OperationResult removeSecurityGroup(java.lang.String sessionID, java.lang.Integer securityGroupID) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -10985,9 +10985,9 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         else {
             extractAttachments(_call);
             try {
-                return (com.cleverdome.api.OperationResultOfanyType) _resp;
+                return (com.cleverdome.api.OperationResult) _resp;
             } catch (java.lang.Exception _exception) {
-                return (com.cleverdome.api.OperationResultOfanyType) org.apache.axis.utils.JavaUtils.convert(_resp, com.cleverdome.api.OperationResultOfanyType.class);
+                return (com.cleverdome.api.OperationResult) org.apache.axis.utils.JavaUtils.convert(_resp, com.cleverdome.api.OperationResult.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -11097,7 +11097,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
 }
     }
 
-    public com.cleverdome.api.OperationResultOfanyType removeUserFromSecurityGroup(java.lang.String sessionID, java.lang.Integer groupID, java.lang.Integer userID) throws java.rmi.RemoteException {
+    public com.cleverdome.api.OperationResult removeUserFromSecurityGroup(java.lang.String sessionID, java.lang.Integer groupID, java.lang.Integer userID) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -11121,9 +11121,9 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         else {
             extractAttachments(_call);
             try {
-                return (com.cleverdome.api.OperationResultOfanyType) _resp;
+                return (com.cleverdome.api.OperationResult) _resp;
             } catch (java.lang.Exception _exception) {
-                return (com.cleverdome.api.OperationResultOfanyType) org.apache.axis.utils.JavaUtils.convert(_resp, com.cleverdome.api.OperationResultOfanyType.class);
+                return (com.cleverdome.api.OperationResult) org.apache.axis.utils.JavaUtils.convert(_resp, com.cleverdome.api.OperationResult.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -11267,7 +11267,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
 }
     }
 
-    public com.cleverdome.api.OperationResultOfanyType removeSecurityGroupFromDocument(java.lang.String sessionID, java.lang.String documentGuid, java.lang.Integer securityGroupID) throws java.rmi.RemoteException {
+    public com.cleverdome.api.OperationResult removeSecurityGroupFromDocument(java.lang.String sessionID, java.lang.String documentGuid, java.lang.Integer securityGroupID) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -11291,9 +11291,9 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         else {
             extractAttachments(_call);
             try {
-                return (com.cleverdome.api.OperationResultOfanyType) _resp;
+                return (com.cleverdome.api.OperationResult) _resp;
             } catch (java.lang.Exception _exception) {
-                return (com.cleverdome.api.OperationResultOfanyType) org.apache.axis.utils.JavaUtils.convert(_resp, com.cleverdome.api.OperationResultOfanyType.class);
+                return (com.cleverdome.api.OperationResult) org.apache.axis.utils.JavaUtils.convert(_resp, com.cleverdome.api.OperationResult.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {
@@ -11369,7 +11369,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
 }
     }
 
-    public com.cleverdome.api.OperationResultOfanyType attachSecurityGroupsToDocument(java.lang.String sessionID, java.lang.String documentGuid, int[] securityGroupIDs, java.lang.Integer securityLevel) throws java.rmi.RemoteException {
+    public com.cleverdome.api.OperationResult attachSecurityGroupsToDocument(java.lang.String sessionID, java.lang.String documentGuid, int[] securityGroupIDs, java.lang.Integer securityLevel) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -11393,9 +11393,9 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         else {
             extractAttachments(_call);
             try {
-                return (com.cleverdome.api.OperationResultOfanyType) _resp;
+                return (com.cleverdome.api.OperationResult) _resp;
             } catch (java.lang.Exception _exception) {
-                return (com.cleverdome.api.OperationResultOfanyType) org.apache.axis.utils.JavaUtils.convert(_resp, com.cleverdome.api.OperationResultOfanyType.class);
+                return (com.cleverdome.api.OperationResult) org.apache.axis.utils.JavaUtils.convert(_resp, com.cleverdome.api.OperationResult.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {

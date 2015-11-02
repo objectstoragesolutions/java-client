@@ -13,7 +13,7 @@ import javax.xml.rpc.ServiceException;
 
 public class Demo {
     public static void main(String[] args) throws Exception {
-       
+
         Properties demoProps = new Properties();
         InputStream inputStream = Demo.class.getResourceAsStream("demo.properties");
         demoProps.load(inputStream);
@@ -159,7 +159,7 @@ public class Demo {
         UserData[] users = widgets.getUsersForGroup(sessionID, securityGroupID).getReturnValue();
         for (UserData user: users)
         {
-            OperationResultOfanyType result = widgets.removeUserFromSecurityGroup(sessionID, securityGroupID, user.getID());
+            widgets.removeUserFromSecurityGroup(sessionID, securityGroupID, user.getID());
         }
     }
 

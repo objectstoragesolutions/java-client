@@ -8,13 +8,13 @@
 package com.cleverdome.api;
 
 public class AttachSecurityGroupsToDocumentResponse  implements java.io.Serializable {
-    private com.cleverdome.api.OperationResultOfanyType attachSecurityGroupsToDocumentResult;
+    private com.cleverdome.api.OperationResult attachSecurityGroupsToDocumentResult;
 
     public AttachSecurityGroupsToDocumentResponse() {
     }
 
     public AttachSecurityGroupsToDocumentResponse(
-           com.cleverdome.api.OperationResultOfanyType attachSecurityGroupsToDocumentResult) {
+           com.cleverdome.api.OperationResult attachSecurityGroupsToDocumentResult) {
            this.attachSecurityGroupsToDocumentResult = attachSecurityGroupsToDocumentResult;
     }
 
@@ -24,7 +24,7 @@ public class AttachSecurityGroupsToDocumentResponse  implements java.io.Serializ
      * 
      * @return attachSecurityGroupsToDocumentResult
      */
-    public com.cleverdome.api.OperationResultOfanyType getAttachSecurityGroupsToDocumentResult() {
+    public com.cleverdome.api.OperationResult getAttachSecurityGroupsToDocumentResult() {
         return attachSecurityGroupsToDocumentResult;
     }
 
@@ -34,7 +34,7 @@ public class AttachSecurityGroupsToDocumentResponse  implements java.io.Serializ
      * 
      * @param attachSecurityGroupsToDocumentResult
      */
-    public void setAttachSecurityGroupsToDocumentResult(com.cleverdome.api.OperationResultOfanyType attachSecurityGroupsToDocumentResult) {
+    public void setAttachSecurityGroupsToDocumentResult(com.cleverdome.api.OperationResult attachSecurityGroupsToDocumentResult) {
         this.attachSecurityGroupsToDocumentResult = attachSecurityGroupsToDocumentResult;
     }
 
@@ -80,7 +80,7 @@ public class AttachSecurityGroupsToDocumentResponse  implements java.io.Serializ
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("attachSecurityGroupsToDocumentResult");
         elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "AttachSecurityGroupsToDocumentResult"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfanyType"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResult"));
         elemField.setMinOccurs(0);
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);

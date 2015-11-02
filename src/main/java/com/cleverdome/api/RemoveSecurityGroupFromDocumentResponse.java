@@ -8,13 +8,13 @@
 package com.cleverdome.api;
 
 public class RemoveSecurityGroupFromDocumentResponse  implements java.io.Serializable {
-    private com.cleverdome.api.OperationResultOfanyType removeSecurityGroupFromDocumentResult;
+    private com.cleverdome.api.OperationResult removeSecurityGroupFromDocumentResult;
 
     public RemoveSecurityGroupFromDocumentResponse() {
     }
 
     public RemoveSecurityGroupFromDocumentResponse(
-           com.cleverdome.api.OperationResultOfanyType removeSecurityGroupFromDocumentResult) {
+           com.cleverdome.api.OperationResult removeSecurityGroupFromDocumentResult) {
            this.removeSecurityGroupFromDocumentResult = removeSecurityGroupFromDocumentResult;
     }
 
@@ -24,7 +24,7 @@ public class RemoveSecurityGroupFromDocumentResponse  implements java.io.Seriali
      * 
      * @return removeSecurityGroupFromDocumentResult
      */
-    public com.cleverdome.api.OperationResultOfanyType getRemoveSecurityGroupFromDocumentResult() {
+    public com.cleverdome.api.OperationResult getRemoveSecurityGroupFromDocumentResult() {
         return removeSecurityGroupFromDocumentResult;
     }
 
@@ -34,7 +34,7 @@ public class RemoveSecurityGroupFromDocumentResponse  implements java.io.Seriali
      * 
      * @param removeSecurityGroupFromDocumentResult
      */
-    public void setRemoveSecurityGroupFromDocumentResult(com.cleverdome.api.OperationResultOfanyType removeSecurityGroupFromDocumentResult) {
+    public void setRemoveSecurityGroupFromDocumentResult(com.cleverdome.api.OperationResult removeSecurityGroupFromDocumentResult) {
         this.removeSecurityGroupFromDocumentResult = removeSecurityGroupFromDocumentResult;
     }
 
@@ -80,7 +80,7 @@ public class RemoveSecurityGroupFromDocumentResponse  implements java.io.Seriali
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("removeSecurityGroupFromDocumentResult");
         elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveSecurityGroupFromDocumentResult"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfanyType"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResult"));
         elemField.setMinOccurs(0);
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);

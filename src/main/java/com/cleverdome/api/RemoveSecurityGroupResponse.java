@@ -8,13 +8,13 @@
 package com.cleverdome.api;
 
 public class RemoveSecurityGroupResponse  implements java.io.Serializable {
-    private com.cleverdome.api.OperationResultOfanyType removeSecurityGroupResult;
+    private com.cleverdome.api.OperationResult removeSecurityGroupResult;
 
     public RemoveSecurityGroupResponse() {
     }
 
     public RemoveSecurityGroupResponse(
-           com.cleverdome.api.OperationResultOfanyType removeSecurityGroupResult) {
+           com.cleverdome.api.OperationResult removeSecurityGroupResult) {
            this.removeSecurityGroupResult = removeSecurityGroupResult;
     }
 
@@ -24,7 +24,7 @@ public class RemoveSecurityGroupResponse  implements java.io.Serializable {
      * 
      * @return removeSecurityGroupResult
      */
-    public com.cleverdome.api.OperationResultOfanyType getRemoveSecurityGroupResult() {
+    public com.cleverdome.api.OperationResult getRemoveSecurityGroupResult() {
         return removeSecurityGroupResult;
     }
 
@@ -34,7 +34,7 @@ public class RemoveSecurityGroupResponse  implements java.io.Serializable {
      * 
      * @param removeSecurityGroupResult
      */
-    public void setRemoveSecurityGroupResult(com.cleverdome.api.OperationResultOfanyType removeSecurityGroupResult) {
+    public void setRemoveSecurityGroupResult(com.cleverdome.api.OperationResult removeSecurityGroupResult) {
         this.removeSecurityGroupResult = removeSecurityGroupResult;
     }
 
@@ -80,7 +80,7 @@ public class RemoveSecurityGroupResponse  implements java.io.Serializable {
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("removeSecurityGroupResult");
         elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "RemoveSecurityGroupResult"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfanyType"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResult"));
         elemField.setMinOccurs(0);
         elemField.setNillable(true);
         typeDesc.addFieldDesc(elemField);
