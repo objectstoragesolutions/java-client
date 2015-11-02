@@ -13,6 +13,10 @@ import javax.xml.rpc.ServiceException;
 
 public class Demo {
     public static void main(String[] args) throws Exception {
+        AxisProperties.setProperty("http.proxyHost", "127.0.0.1");
+        AxisProperties.setProperty("http.proxyPort", "8888");
+        AxisProperties.setProperty("axis.socketSecureFactory","org.apache.axis.components.net.SunFakeTrustSocketFactory");
+
         Properties demoProps = new Properties();
         InputStream inputStream = Demo.class.getResourceAsStream("demo.properties");
         demoProps.load(inputStream);
@@ -57,6 +61,7 @@ public class Demo {
 
         int cleverDomeUserID = userManagementDemo.getCleverDomeUserID(userID);
         testSecurityGroups(sessionID, documentID, cleverDomeUserID, applicationID);
+        testArchiving(sessionID, documentID);
     }
 
     public static ApiKeyResponseMessage getApiKeyResponse(String apiKey, String userID, String[] ipAddresses) throws RemoteException, ServiceException {
@@ -182,5 +187,14 @@ public class Demo {
                 System.out.println("\tID: " +  user.getID() + ", Name: " + user.getFullName() + ".");
             }
         }
+    }
+
+    public static void testArchiving(String sessionID, String documentID) throws ServiceException, RemoteException {
+        WidgetsLocator widgetsLocator = new WidgetsLocator();
+        IWidgets widgets = widgetsLocator.getBasicHttpBinding_IWidgets();
+
+        System.out.println("Archiving document");
+        int archiveDays = 365;
+        widgets.archiveDocuments(sessionID, new String[] { documentID }, archiveDays);
     }
 }
