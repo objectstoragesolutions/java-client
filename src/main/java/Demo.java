@@ -6,6 +6,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.rmi.RemoteException;
+import java.text.SimpleDateFormat;
 import java.util.Base64;
 import java.util.Date;
 import java.util.Properties;
@@ -13,7 +14,7 @@ import javax.xml.rpc.ServiceException;
 
 public class Demo {
     public static void main(String[] args) throws Exception {
-
+        
         Properties demoProps = new Properties();
         InputStream inputStream = Demo.class.getResourceAsStream("demo.properties");
         demoProps.load(inputStream);
@@ -192,6 +193,23 @@ public class Demo {
 
         System.out.println("Archiving document");
         int archiveDays = 365;
-        widgets.archiveDocuments(sessionID, new String[] { documentID }, archiveDays);
+        String[] documentIDs = new String[]{documentID};
+        widgets.archiveDocuments(sessionID, documentIDs, archiveDays);
+
+        printArchivingStatus(widgets, sessionID, documentIDs);
+
+    }
+
+    public static void printArchivingStatus(IWidgets widgets, String sessionID, String[] documentIDs) throws RemoteException {
+        OperationResultOfArrayOfDocumentRevisionArchiveInfowJCT_PyJf documentArchiveInfo = widgets.getArchiveInfoForDocument(sessionID, documentIDs);
+        System.out.println("Document archival info:");
+
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyy");
+        for(DocumentRevisionArchiveInfo revisionArchiveInfo: documentArchiveInfo.getReturnValue()) {
+            String date = sdf.format(revisionArchiveInfo.getArchivedTill().getTime());
+
+            System.out.println("\tRevision number: " +  revisionArchiveInfo.getRevisionNumber() +
+                    ", Archived till: " + date);
+        }
     }
 }
