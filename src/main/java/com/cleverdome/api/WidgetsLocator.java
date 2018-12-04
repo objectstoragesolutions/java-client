@@ -9,10 +9,9 @@ package com.cleverdome.api;
 
 public class WidgetsLocator extends org.apache.axis.client.Service implements com.cleverdome.api.Widgets {
 
-    public WidgetsLocator() {
+    public WidgetsLocator(WidgetsLocator_address address) {
+        BasicHttpBinding_IWidgets_address = address.url();
     }
-
-
     public WidgetsLocator(org.apache.axis.EngineConfiguration config) {
         super(config);
     }
@@ -21,11 +20,25 @@ public class WidgetsLocator extends org.apache.axis.client.Service implements co
         super(wsdlLoc, sName);
     }
 
-    // Use to get a proxy class for BasicHttpBinding_IWidgets
-    private java.lang.String BasicHttpBinding_IWidgets_address = "https://sandbox.cleverdome.com/CDWidgets/Services/Widgets.svc/basic";
+    public enum WidgetsLocator_address {
+        Prod("https://www.objectstoragesolutions.io/soap-api/Services/Widgets.svc/basic"),
+        SandBox("https://sandbox.objectstoragesolutions.io/soap-api/Services/Widgets.svc/basic");
+        private String url;
 
-    public java.lang.String getBasicHttpBinding_IWidgetsAddress() {
-        return BasicHttpBinding_IWidgets_address;
+        WidgetsLocator_address(String url) {
+            this.url = url;
+        }
+
+        public String url() {
+            return url;
+        }
+    }
+
+    // Use to get a proxy class for BasicHttpBinding_IWidgets
+    private java.lang.String BasicHttpBinding_IWidgets_address = "";
+
+    public java.lang.String getBasicHttpBinding_IWidgetsAddress(WidgetsLocator_address address) {
+        return address.url();
     }
 
     // The WSDD service name defaults to the port name.

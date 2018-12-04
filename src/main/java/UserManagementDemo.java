@@ -16,9 +16,9 @@ public class UserManagementDemo {
         this.demoProps = demoProperties;
     }
 
-    public static UserManagementDemo getInstance() throws IOException, ServiceException {
+    public static UserManagementDemo getInstance(VendorUserManagementLocator.VendorUserManagement_address address ) throws IOException, ServiceException {
         VendorUserManagementLocator vendorUserManagementLocator =
-                new VendorUserManagementLocator();
+                new VendorUserManagementLocator(address);
 
         Properties demoProps = new Properties();
         InputStream inputStream = Demo.class.getResourceAsStream("demo.properties");

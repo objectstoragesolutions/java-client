@@ -8,7 +8,7 @@
 package com.cleverdome.api;
 
 public interface Widgets extends javax.xml.rpc.Service {
-    public java.lang.String getBasicHttpBinding_IWidgetsAddress();
+    public java.lang.String getBasicHttpBinding_IWidgetsAddress(WidgetsLocator.WidgetsLocator_address address);
 
     public com.cleverdome.api.IWidgets getBasicHttpBinding_IWidgets() throws javax.xml.rpc.ServiceException;
 

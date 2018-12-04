@@ -9,9 +9,9 @@ package com.cleverdome.auth.apikeys;
 
 public class ApiKeyServiceLocator extends org.apache.axis.client.Service implements com.cleverdome.auth.apikeys.ApiKeyService {
 
-    public ApiKeyServiceLocator() {
+    public ApiKeyServiceLocator(ApiKeyServiceLocator_address address) {
+        BasicHttpBinding_IApiKeyService_address = address.url();
     }
-
 
     public ApiKeyServiceLocator(org.apache.axis.EngineConfiguration config) {
         super(config);
@@ -20,9 +20,23 @@ public class ApiKeyServiceLocator extends org.apache.axis.client.Service impleme
     public ApiKeyServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
         super(wsdlLoc, sName);
     }
+    
+    public enum ApiKeyServiceLocator_address {
+        Prod("https://www.objectstoragesolutions.io/soap-api/Services/ApiKeyService.svc"),
+        SandBox("https://sandbox.objectstoragesolutions.io/soap-api/Services/ApiKeyService.svc");
+
+        private String url;
+
+        ApiKeyServiceLocator_address(String url) {
+            this.url = url;
+        }
+        public String url() {
+            return url;
+        }
+    }
 
     // Use to get a proxy class for BasicHttpBinding_IApiKeyService
-    private java.lang.String BasicHttpBinding_IApiKeyService_address = "https://sandbox.cleverdome.com/CDSSOService/ApiKeyService.svc";
+    private java.lang.String BasicHttpBinding_IApiKeyService_address = "";
 
     public java.lang.String getBasicHttpBinding_IApiKeyServiceAddress() {
         return BasicHttpBinding_IApiKeyService_address;

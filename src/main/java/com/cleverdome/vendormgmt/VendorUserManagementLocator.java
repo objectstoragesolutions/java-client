@@ -9,9 +9,9 @@ package com.cleverdome.vendormgmt;
 
 public class VendorUserManagementLocator extends org.apache.axis.client.Service implements com.cleverdome.vendormgmt.VendorUserManagement {
 
-    public VendorUserManagementLocator() {
+    public VendorUserManagementLocator(VendorUserManagement_address address) {
+        BasicHttpBinding_IVendorUserManagement_address = address.url();
     }
-
 
     public VendorUserManagementLocator(org.apache.axis.EngineConfiguration config) {
         super(config);
@@ -21,11 +21,24 @@ public class VendorUserManagementLocator extends org.apache.axis.client.Service 
         super(wsdlLoc, sName);
     }
 
+    public enum VendorUserManagement_address {
+        Prod("https://www.objectstoragesolutions.io/soap-api/Services/VendorUserManagement.svc"),
+        SandBox("https://sandbox.objectstoragesolutions.io/soap-api/Services/VendorUserManagement.svc");
+        private String url;
+
+        VendorUserManagement_address(String url) {
+            this.url = url;
+        }
+
+        public String url() {
+            return url;
+        }
+    }
     // Use to get a proxy class for BasicHttpBinding_IVendorUserManagement
-    private java.lang.String BasicHttpBinding_IVendorUserManagement_address = "https://sandbox.cleverdome.com/CDWidgets/Services/VendorUserManagement.svc";
+    private java.lang.String BasicHttpBinding_IVendorUserManagement_address = "";
 
     public java.lang.String getBasicHttpBinding_IVendorUserManagementAddress() {
-        return BasicHttpBinding_IVendorUserManagement_address;
+            return BasicHttpBinding_IVendorUserManagement_address;
     }
 
     // The WSDD service name defaults to the port name.
@@ -97,7 +110,7 @@ public class VendorUserManagementLocator extends org.apache.axis.client.Service 
         if ("BasicHttpBinding_IVendorUserManagement".equals(inputPortName)) {
             return getBasicHttpBinding_IVendorUserManagement();
         }
-        else  {
+        else {
             java.rmi.Remote _stub = getPort(serviceEndpointInterface);
             ((org.apache.axis.client.Stub) _stub).setPortName(portName);
             return _stub;

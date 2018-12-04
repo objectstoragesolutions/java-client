@@ -8,8 +8,6 @@
 package com.cleverdome.vendormgmt;
 
 public interface VendorUserManagement extends javax.xml.rpc.Service {
-    public java.lang.String getBasicHttpBinding_IVendorUserManagementAddress();
-
     public com.cleverdome.vendormgmt.IVendorUserManagement getBasicHttpBinding_IVendorUserManagement() throws javax.xml.rpc.ServiceException;
 
     public com.cleverdome.vendormgmt.IVendorUserManagement getBasicHttpBinding_IVendorUserManagement(java.net.URL portAddress) throws javax.xml.rpc.ServiceException;

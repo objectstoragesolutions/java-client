@@ -1,5 +1,6 @@
 import com.cleverdome.api.*;
 import com.cleverdome.auth.apikeys.*;
+import com.cleverdome.vendormgmt.VendorUserManagementLocator;
 import org.apache.axis.AxisProperties;
 
 import java.io.ByteArrayOutputStream;
@@ -30,7 +31,7 @@ public class Demo {
         String sessionID = responseMessage.getSessionID();
         System.out.println("SessionID: " + sessionID);
 
-        UserManagementDemo userManagementDemo = UserManagementDemo.getInstance();
+        UserManagementDemo userManagementDemo = UserManagementDemo.getInstance(VendorUserManagementLocator.VendorUserManagement_address.SandBox);
         userManagementDemo.testUserCreation();
         userManagementDemo.testUserCheck();
         userManagementDemo.testUserDelete();
@@ -43,10 +44,6 @@ public class Demo {
         String documentID = uploadFile(sessionID, applicationID, null, null, null, fileName, fileBase64String);
         System.out.println("DocumentID: " + documentID);
 
-        DocumentField[] allowedFields = getAllowedFields(sessionID, documentID);
-        for (DocumentField documentField : allowedFields) {
-            System.out.println(documentField.getID() + ": " + documentField.getName());
-        }
 
         int fieldID = Integer.parseInt(demoProps.getProperty("fieldID"));
         String fieldValue = demoProps.getProperty("fieldValue") + " from " + (new Date()).toString();
@@ -63,7 +60,7 @@ public class Demo {
     }
 
     public static ApiKeyResponseMessage getApiKeyResponse(String apiKey, String userID, String[] ipAddresses) throws RemoteException, ServiceException {
-        ApiKeyServiceLocator apiKeyServiceLocator = new ApiKeyServiceLocator();
+        ApiKeyServiceLocator apiKeyServiceLocator = new ApiKeyServiceLocator(ApiKeyServiceLocator.ApiKeyServiceLocator_address.SandBox);
         IApiKeyService keyService = apiKeyServiceLocator.getBasicHttpBinding_IApiKeyService();
 
         ApiKeyRequestMessage requestMessage = new ApiKeyRequestMessage(apiKey, ipAddresses, userID);
@@ -73,26 +70,21 @@ public class Demo {
     public static String uploadFile(String sessionID, Integer applicationID, Integer templateID, Integer descriptionID,
                                  DocumentMetadataValueBase[] metadata, String fileName, String fileBase64String)
             throws RemoteException, ServiceException {
-        WidgetsLocator widgetsLocator = new WidgetsLocator();
+        WidgetsLocator widgetsLocator = new WidgetsLocator(WidgetsLocator.WidgetsLocator_address.SandBox);
         IWidgets widgets = widgetsLocator.getBasicHttpBinding_IWidgets();
         return widgets.uploadFileJava(sessionID, applicationID, templateID, descriptionID, metadata, fileName, fileBase64String);
     }
 
-    public static DocumentField[] getAllowedFields(String sessionID, String documentID) throws RemoteException, ServiceException {
-        WidgetsLocator widgetsLocator = new WidgetsLocator();
-        IWidgets widgets = widgetsLocator.getBasicHttpBinding_IWidgets();
-        return widgets.getAllowedFieldsForDocument(sessionID, documentID).getReturnValue();
-    }
 
     public static DocumentMetadataValueBase[] getDocumentFields(String sessionID, String documentID, int fieldID) throws RemoteException, ServiceException {
-        WidgetsLocator widgetsLocator = new WidgetsLocator();
+        WidgetsLocator widgetsLocator = new WidgetsLocator(WidgetsLocator.WidgetsLocator_address.SandBox);
         IWidgets widgets = widgetsLocator.getBasicHttpBinding_IWidgets();
         return widgets.getMetadataValuesForFieldType(sessionID, documentID, fieldID).getReturnValue();
     }
 
     public static void addField(String sessionID, String documentID, int fieldID, String fieldValue)
             throws RemoteException, ServiceException {
-        WidgetsLocator widgetsLocator = new WidgetsLocator();
+        WidgetsLocator widgetsLocator = new WidgetsLocator(WidgetsLocator.WidgetsLocator_address.SandBox);
         IWidgets widgets = widgetsLocator.getBasicHttpBinding_IWidgets();
 
         DocumentMetadataValueBase field = new DocumentMetadataValueBase();
@@ -122,7 +114,7 @@ public class Demo {
     public static void testSecurityGroups(String sessionID, String documentID, int userID, int applicationID)
             throws ServiceException, RemoteException {
 
-        WidgetsLocator widgetsLocator = new WidgetsLocator();
+        WidgetsLocator widgetsLocator = new WidgetsLocator(WidgetsLocator.WidgetsLocator_address.SandBox);
         IWidgets widgets = widgetsLocator.getBasicHttpBinding_IWidgets();
 
         int securityGroupID = createSecurityGroup(widgets, sessionID, userID, applicationID);
@@ -188,7 +180,7 @@ public class Demo {
     }
 
     public static void testArchiving(String sessionID, String documentID) throws ServiceException, RemoteException {
-        WidgetsLocator widgetsLocator = new WidgetsLocator();
+        WidgetsLocator widgetsLocator = new WidgetsLocator(WidgetsLocator.WidgetsLocator_address.SandBox);
         IWidgets widgets = widgetsLocator.getBasicHttpBinding_IWidgets();
 
         System.out.println("Archiving document");
