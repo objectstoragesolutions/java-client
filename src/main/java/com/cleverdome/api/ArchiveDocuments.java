@@ -12,18 +12,15 @@ public class ArchiveDocuments  implements java.io.Serializable {
 
     private java.lang.String[] documentGuids;
 
-    private java.lang.Integer daysAmount;
-
     public ArchiveDocuments() {
     }
 
     public ArchiveDocuments(
            java.lang.String sessionID,
-           java.lang.String[] documentGuids,
-           java.lang.Integer daysAmount) {
+           java.lang.String[] documentGuids
+           ) {
            this.sessionID = sessionID;
            this.documentGuids = documentGuids;
-           this.daysAmount = daysAmount;
     }
 
 
@@ -66,26 +63,6 @@ public class ArchiveDocuments  implements java.io.Serializable {
         this.documentGuids = documentGuids;
     }
 
-
-    /**
-     * Gets the daysAmount value for this ArchiveDocuments.
-     * 
-     * @return daysAmount
-     */
-    public java.lang.Integer getDaysAmount() {
-        return daysAmount;
-    }
-
-
-    /**
-     * Sets the daysAmount value for this ArchiveDocuments.
-     * 
-     * @param daysAmount
-     */
-    public void setDaysAmount(java.lang.Integer daysAmount) {
-        this.daysAmount = daysAmount;
-    }
-
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof ArchiveDocuments)) return false;
@@ -103,10 +80,7 @@ public class ArchiveDocuments  implements java.io.Serializable {
               this.sessionID.equals(other.getSessionID()))) &&
             ((this.documentGuids==null && other.getDocumentGuids()==null) || 
              (this.documentGuids!=null &&
-              java.util.Arrays.equals(this.documentGuids, other.getDocumentGuids()))) &&
-            ((this.daysAmount==null && other.getDaysAmount()==null) || 
-             (this.daysAmount!=null &&
-              this.daysAmount.equals(other.getDaysAmount())));
+              java.util.Arrays.equals(this.documentGuids, other.getDocumentGuids())));
         __equalsCalc = null;
         return _equals;
     }
@@ -132,9 +106,6 @@ public class ArchiveDocuments  implements java.io.Serializable {
                 }
             }
         }
-        if (getDaysAmount() != null) {
-            _hashCode += getDaysAmount().hashCode();
-        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -159,13 +130,6 @@ public class ArchiveDocuments  implements java.io.Serializable {
         elemField.setMinOccurs(0);
         elemField.setNillable(true);
         elemField.setItemQName(new javax.xml.namespace.QName("http://schemas.microsoft.com/2003/10/Serialization/Arrays", "guid"));
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("daysAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "daysAmount"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }
 

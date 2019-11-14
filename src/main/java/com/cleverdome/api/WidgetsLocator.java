@@ -22,7 +22,8 @@ public class WidgetsLocator extends org.apache.axis.client.Service implements co
 
     public enum WidgetsLocator_address {
         Prod("https://www.objectstoragesolutions.io/soap-api/Services/Widgets.svc/basic"),
-        SandBox("https://sandbox.objectstoragesolutions.io/soap-api/Services/Widgets.svc/basic");
+        SandBox("https://sandbox.objectstoragesolutions.io/soap-api/Services/Widgets.svc/basic"),
+        Test("https://test.objectstoragesolutions.io/soap-api/Services/Widgets.svc/basic");
         private String url;
 
         WidgetsLocator_address(String url) {

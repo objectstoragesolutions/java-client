@@ -23,7 +23,8 @@ public class VendorUserManagementLocator extends org.apache.axis.client.Service 
 
     public enum VendorUserManagement_address {
         Prod("https://www.objectstoragesolutions.io/soap-api/Services/VendorUserManagement.svc"),
-        SandBox("https://sandbox.objectstoragesolutions.io/soap-api/Services/VendorUserManagement.svc");
+        SandBox("https://sandbox.objectstoragesolutions.io/soap-api/Services/VendorUserManagement.svc"),
+        Test("https://test.objectstoragesolutions.io/soap-api/Services/VendorUserManagement.svc");
         private String url;
 
         VendorUserManagement_address(String url) {

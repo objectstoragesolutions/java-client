@@ -23,7 +23,8 @@ public class ApiKeyServiceLocator extends org.apache.axis.client.Service impleme
     
     public enum ApiKeyServiceLocator_address {
         Prod("https://www.objectstoragesolutions.io/soap-api/Services/ApiKeyService.svc"),
-        SandBox("https://sandbox.objectstoragesolutions.io/soap-api/Services/ApiKeyService.svc");
+        SandBox("https://sandbox.objectstoragesolutions.io/soap-api/Services/ApiKeyService.svc"),
+        Test("https://test.objectstoragesolutions.io/soap-api/Services/ApiKeyService.svc");
 
         private String url;
 

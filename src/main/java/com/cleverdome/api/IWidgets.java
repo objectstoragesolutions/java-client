@@ -43,7 +43,7 @@ public interface IWidgets extends java.rmi.Remote {
     public com.cleverdome.api.OperationResultOfUploadCheckResult52SKXdDF checkIfCanReuploadDocument(java.lang.String sessionID, java.lang.String documentGuid, java.lang.Long fileSize, java.lang.String fileExtension) throws java.rmi.RemoteException;
     public com.cleverdome.api.OperationResultOfBucketQuotaInfo52SKXdDF getBucketQuotaInfo(java.lang.Integer applicationID, java.lang.String sessionID, java.lang.Integer sharedUserID) throws java.rmi.RemoteException;
     public com.cleverdome.api.OperationResultOfanyType lockUnlockDocsForDelete(java.lang.String sessionID, java.lang.String[] documentGuids, java.lang.Boolean lockDocuments) throws java.rmi.RemoteException;
-    public com.cleverdome.api.OperationResultOfdateTime archiveDocuments(java.lang.String sessionID, java.lang.String[] documentGuids, java.lang.Integer daysAmount) throws java.rmi.RemoteException;
+    public com.cleverdome.api.OperationResultOfdateTime archiveDocuments(java.lang.String sessionID, java.lang.String[] revisionGuids) throws java.rmi.RemoteException;
     public com.cleverdome.api.BarcodesDataList getDocumentActiveBarcodes(byte[] inputStream) throws java.rmi.RemoteException;
     public com.cleverdome.api.DocumentRevision addDocumentRevision(byte[] inputStream) throws java.rmi.RemoteException;
     public java.lang.String addExternalDocumentRevision(java.lang.String parentDocGuid, java.lang.Long fileSize, java.util.Calendar revisionDate, java.lang.Integer uploadedBy, java.lang.String fileType, java.lang.String sha1Hash, java.lang.String versionID, java.lang.Integer appID) throws java.rmi.RemoteException;

@@ -811,9 +811,6 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
         param.setOmittable(true);
         param.setNillable(true);
         oper.addParameter(param);
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://tempuri.org/", "daysAmount"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"), java.lang.Integer.class, false, false);
-        param.setOmittable(true);
-        oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://schemas.datacontract.org/2004/07/CleverDomeDocumentManagement.Data", "OperationResultOfdateTime"));
         oper.setReturnClass(com.cleverdome.api.OperationResultOfdateTime.class);
         oper.setReturnQName(new javax.xml.namespace.QName("http://tempuri.org/", "ArchiveDocumentsResult"));
@@ -9057,7 +9054,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
 }
     }
 
-    public com.cleverdome.api.OperationResultOfdateTime archiveDocuments(java.lang.String sessionID, java.lang.String[] documentGuids, java.lang.Integer daysAmount) throws java.rmi.RemoteException {
+    public com.cleverdome.api.OperationResultOfdateTime archiveDocuments(java.lang.String sessionID, java.lang.String[] revisionGuids) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -9073,7 +9070,7 @@ public class BasicHttpBinding_IWidgetsStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sessionID, documentGuids, daysAmount});
+ try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {sessionID, revisionGuids});
 
         if (_resp instanceof java.rmi.RemoteException) {
             throw (java.rmi.RemoteException)_resp;
